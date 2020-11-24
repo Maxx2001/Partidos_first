@@ -11,4 +11,12 @@ class Event extends Model
 
     protected $guarded = [];
 
+    public function events()
+    {
+        //change to show only events with user id
+        return Event::orderBy('date', 'asc')
+            ->latest()
+            ->get();
+    }
+
 }

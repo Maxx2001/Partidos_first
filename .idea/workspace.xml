@@ -23,11 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/agenda.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/event/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/create_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TimeLineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TimeLineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agenda.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/timeline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +202,8 @@
       <workItem from="1606053739732" duration="1362000" />
       <workItem from="1606143454396" duration="298000" />
       <workItem from="1606221085201" duration="208000" />
-      <workItem from="1606233268165" duration="4782000" />
+      <workItem from="1606233268165" duration="4976000" />
+      <workItem from="1606242170721" duration="5452000" />
     </task>
     <servers />
   </component>
@@ -216,12 +220,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2476" y="330" width="563" height="395" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606237469019">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2476" y="330" width="563" height="395" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1680.1050/0.25.1920.1055@1920.0.1680.1050" timestamp="1606237469019" />
+    <state x="620" y="379" width="676" height="352" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1606245135991">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="620" y="379" width="676" height="352" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/1920.0.1680.1050/0.25.1920.1055@0.25.1920.1055" timestamp="1606245135991" />
     <state x="2543" y="284" width="430" height="486" key="FileChooserDialogImpl" timestamp="1606147629140">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
@@ -231,10 +240,10 @@
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2421" y="240" key="run.anything.popup/1920.0.1680.1050/0.25.1920.1055@1920.0.1680.1050" timestamp="1606235043545" />
-    <state x="2465" y="232" width="672" height="675" key="search.everywhere.popup" timestamp="1606237562927">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1606246653481">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/1920.0.1680.1050/0.25.1920.1055@0.25.1920.1055" timestamp="1606055655930" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/1920.0.1680.1050/0.25.1920.1055@0.25.1920.1055" timestamp="1606246653481" />
     <state x="2465" y="232" width="672" height="675" key="search.everywhere.popup/1920.0.1680.1050/0.25.1920.1055@1920.0.1680.1050" timestamp="1606237562927" />
   </component>
 </project>

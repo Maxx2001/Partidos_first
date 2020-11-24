@@ -30,5 +30,12 @@ Route::middleware('auth')->group(function(){
     Route::post('/create', [EventController::class, 'create'])->name('create');
     Route::get('/agenda', [EventController::class, 'show'])->name('agenda');
 
+    Route::get('/delete/{event:id}', [EventController::class, 'destroy'])->name('delete');
+    Route::get('/event/{event:id}/edit', [EventController::class, 'edit'])->name('edit_event');
+
+
+    Route::get('/event/{user:username}/edit', [EventController::class, 'edit']);
+
+
 });
 

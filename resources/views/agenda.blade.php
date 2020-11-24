@@ -10,6 +10,8 @@
              <p class="m-1">Datum: {{$data->date}}</p>
              <p class="m-1">Start tijd: {{$data->start_time}}</p>
              <p class="m-1">Eind tijd: {{$data->end_time}}</p>
+             <a href="{{ route('edit_event', $data) }}" class="border">Edit event</a>
+             <a href="{{ route('delete', $data) }}" class="border">Delete event</a>
          </div>
         @endforeach
     </div>
