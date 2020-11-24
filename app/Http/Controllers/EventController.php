@@ -10,12 +10,11 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view('create_event');
+        return view('event.create_event');
     }
 
     public function create(Request $request)
     {
-//    return $request->all();
         $event = new Event();
         $event->eventname = request('eventname');
         $event->host =  Auth::user()->username;
@@ -25,5 +24,12 @@ class EventController extends Controller
         $event->end_time = request('end_time');
 
         $event->save();
+    }
+
+    public function show(Event $event)
+    {
+        return view('agenda',[
+            'event' => Event::all()
+        ]);
     }
 }

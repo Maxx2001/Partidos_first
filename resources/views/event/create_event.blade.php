@@ -1,10 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="flex justify-center my-2">
-        <h1 class="text-2xl border rounded-2xl p-3">Agenda</h1>
-    </div>
-
     <form method="POST" action="create">
         <div class="flex flex-col justify-center items-center">
             @csrf

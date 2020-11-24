@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function(){
 
     Route::get('/create', [EventController::class, 'index'])->name('create_event');
     Route::post('/create', [EventController::class, 'create'])->name('create');
+    Route::get('/agenda', [EventController::class, 'show'])->name('agenda');
 
 });
 

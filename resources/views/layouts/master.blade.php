@@ -20,6 +20,7 @@
     <ul class="flex py-4 justify-center border">
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('timeline') }}">Home</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('create_event') }}">Create event</a></li>
+        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('agenda') }}">Agenda</a></li>
     </ul>
 </header>
         @yield('content')
