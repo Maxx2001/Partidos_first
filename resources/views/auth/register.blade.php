@@ -35,7 +35,7 @@
                         </label>
 
                         <input id="username" type="text" class="form-input w-full @error('username')  border-red-500 @enderror"
-                               name="username" value="{{ old('username') }}" required autocomplete="name" autofocus>
+                               name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                         @error('username')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -52,9 +52,26 @@
 
                         <input id="phonenumber" type="tel"
                             class="form-input w-full @error('phonenumber') border-red-500 @enderror" name="phonenumber"
-                            value="{{ old('phonenumber') }}" required autocomplete="email">
+                            value="{{ old('phonenumber') }}" required autocomplete="phonenumber">
 
                         @error('phonenumber')
+                        <p class="text-red-500 text-xs italic mt-4">
+                            {{ $message }}
+                        </p>
+                        @enderror
+                    </div>
+
+
+                    <div class="flex flex-wrap">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                            {{ __('Email') }}:
+                        </label>
+
+                        <input id="email" type="email"
+                               class="form-input w-full @error('email') border-red-500 @enderror" name="email"
+                               value="{{ old('email') }}" required autocomplete="email">
+
+                        @error('email')
                         <p class="text-red-500 text-xs italic mt-4">
                             {{ $message }}
                         </p>
