@@ -20,8 +20,8 @@ class EventController extends Controller
             'eventname' => 'required|max:255',
             'location' => 'required|max:255',
             'date' => 'required|max:255',
-            'start_time' => 'date_format:H:i|required|max:255',
-            'end_time' => 'date_format:H:i|date_format:H:i|after:time_start',
+            'start_time' => 'required|max:255',
+            'end_time' => 'nullable|after:time_start',
         ]);
 
 

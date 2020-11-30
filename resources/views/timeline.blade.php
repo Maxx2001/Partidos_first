@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <p>Timeline</p>
+    <h1 class="text-6xl text-center">Timeline</h1>
 
     <div class="flex flex-col justify-center items-center">
         @forelse($event as $data)
