@@ -23,14 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/edit_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Partidos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Partidos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/timeline.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,7 +168,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/var/www/html/Een-foodblog-916d1f78-11420189" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -206,6 +211,13 @@
       <workItem from="1606289194585" duration="14000" />
       <workItem from="1606654061665" duration="9974000" />
       <workItem from="1606743485116" duration="319000" />
+      <workItem from="1606768750936" duration="149000" />
+      <workItem from="1606768984129" duration="91000" />
+      <workItem from="1606769089037" duration="142000" />
+      <workItem from="1606769242301" duration="68000" />
+      <workItem from="1606769676428" duration="917000" />
+      <workItem from="1606821424001" duration="937000" />
+      <workItem from="1606822755189" duration="2464000" />
     </task>
     <servers />
   </component>
@@ -225,10 +237,19 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2476" y="330" width="563" height="395" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606237469019">
+    <state x="2355" y="182" width="800" height="719" key="#Plugins" timestamp="1606769180262">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
+    <state x="2355" y="182" width="800" height="719" key="#Plugins/1920.0.1680.1050/0.27.1920.1053@1920.0.1680.1050" timestamp="1606769180262" />
+    <state x="555" y="201" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606821761470">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="201" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1680.1050/0.27.1920.1053@0.27.1920.1053" timestamp="1606821761470" />
+    <state x="635" y="358" width="563" height="395" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606821473863">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
     <state x="2476" y="330" width="563" height="395" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1680.1050/0.25.1920.1055@1920.0.1680.1050" timestamp="1606237469019" />
+    <state x="635" y="358" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1680.1050/0.27.1920.1053@0.27.1920.1053" timestamp="1606821473863" />
     <state x="620" y="379" width="676" height="352" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1606245135991">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
@@ -247,10 +268,12 @@
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2421" y="240" key="run.anything.popup/1920.0.1680.1050/0.25.1920.1055@1920.0.1680.1050" timestamp="1606235043545" />
-    <state x="2465" y="232" width="672" height="675" key="search.everywhere.popup" timestamp="1606661864181">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state x="623" y="260" width="768" height="677" key="search.everywhere.popup" timestamp="1606821758330">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/1920.0.1680.1050/0.25.1920.1055@0.25.1920.1055" timestamp="1606246653481" />
     <state x="2465" y="232" width="672" height="675" key="search.everywhere.popup/1920.0.1680.1050/0.25.1920.1055@1920.0.1680.1050" timestamp="1606661864181" />
+    <state x="623" y="260" width="768" height="677" key="search.everywhere.popup/1920.0.1680.1050/0.27.1920.1053@0.27.1920.1053" timestamp="1606821758330" />
+    <state x="2465" y="232" width="672" height="675" key="search.everywhere.popup/1920.0.1680.1050/0.27.1920.1053@1920.0.1680.1050" timestamp="1606769206599" />
   </component>
 </project>
