@@ -10,18 +10,78 @@
             @method('PATCH')
             <div>
                 <label for="name" class="">
+                    {{ __('Name') }}:
+                </label>
+                <input
+                    id="name"
+                    type="text"
+                    class="border @error('name')  border-red-500 @enderror"
+                    name="name"
+                    value="{{ $user->name}}"
+                    required autocomplete="name"
+                    autofocus>
+
+                @error('name')
+                <p class="text-red-500 text-xs italic mt-4">
+                    {{ $message }}
+                </p>
+                @enderror
+            </div>
+
+            <div>
+                <label for="username" class="">
                     {{ __('Username') }}:
                 </label>
                 <input
                     id="username"
                     type="text"
-                    class="border @error('name')  border-red-500 @enderror"
+                    class="border @error('username')  border-red-500 @enderror"
                     name="username"
                     value="{{ $user->username}}"
-                    required autocomplete="name"
+                    required autocomplete="username "
                     autofocus>
 
                 @error('username')
+                <p class="text-red-500 text-xs italic mt-4">
+                    {{ $message }}
+                </p>
+                @enderror
+            </div>
+
+            <div>
+                <label for="phonenumber" class="">
+                    {{ __('Phone Number') }}:
+                </label>
+                <input
+                    id="phonenumber"
+                    type="tel"
+                    class="border @error('phonenumber')  border-red-500 @enderror"
+                    name="phonenumber"
+                    value="{{ $user->phonenumber}}"
+                    required autocomplete="phonenumber"
+                    autofocus>
+
+                @error('phonenumber')
+                <p class="text-red-500 text-xs italic mt-4">
+                    {{ $message }}
+                </p>
+                @enderror
+            </div>
+
+            <div>
+                <label for="email" class="">
+                    {{ __('Email') }}:
+                </label>
+                <input
+                    id="email"
+                    type="email"
+                    class="border @error('email')  border-red-500 @enderror"
+                    name="email"
+                    value="{{ $user->email}}"
+                    required autocomplete="email"
+                    autofocus>
+
+                @error('email')
                 <p class="text-red-500 text-xs italic mt-4">
                     {{ $message }}
                 </p>
@@ -32,7 +92,3 @@
         </form>
     </div>
 @endsection
-
-
-
-

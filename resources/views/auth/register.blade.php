@@ -31,7 +31,6 @@
 
                     <div class="flex flex-wrap">
                         <label for="username" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('Username') }}:
                         </label>
 
                         <input id="username" type="text" class="form-input w-full @error('username')  border-red-500 @enderror"
@@ -46,7 +45,7 @@
 
 
                     <div class="flex flex-wrap">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="phonenumber" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Phone Number') }}:
                         </label>
 
