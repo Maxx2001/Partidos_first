@@ -23,13 +23,12 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function update(ProfileRequest $request, User $user, $id)
+    public function update(ProfileRequest $request, User $user)
     {
         $attributes = $request->validated();
-
         $user->update($attributes);
 
-        return redirect('/profile');
+        return view('profile.profile', compact('user'));
 
     }
 }
