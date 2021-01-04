@@ -14,13 +14,12 @@ class EventController extends Controller
     public function index(User $user)
     {
         return view('agenda', [
-//            'event' => $event->events(),
             'event' => User::find(1)->event
         ]);
     }
 
     public function show(User $user, $id){
-        return view('agenda', [
+        return view('event.created_events', [
             'event' => User::find($id)->event
         ]);
     }

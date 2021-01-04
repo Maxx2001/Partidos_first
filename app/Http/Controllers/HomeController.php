@@ -10,4 +10,9 @@ class HomeController extends Controller
     {
         return view('portal');
     }
+
+//    public function agenda()
+//    {
+//        return view('agenda');
+//    }
 }

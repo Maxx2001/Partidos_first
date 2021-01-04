@@ -19,7 +19,7 @@
     <ul class="flex py-4 justify-center border">
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="/">Home</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('create_event') }}">Create event</a></li>
-        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('agenda', auth()->id()) }}">Agenda</a></li>
+        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('agenda') }}">Agenda</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('profile', $user = auth()->id()) }}">Profile</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('friends')}}">Friends</a></li>
         <li><a href="{{ route('logout') }}"
