@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <form method="POST" action="create">
+    <form method="POST" action="{{ route('create') }}">
         <div class="flex flex-col justify-center items-center">
             @csrf
             <div class="p-3">

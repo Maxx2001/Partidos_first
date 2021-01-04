@@ -13,10 +13,15 @@ class Event extends Model
 
     public function events()
     {
-        //change to show only events with user id
         return Event::orderBy('date', 'asc')
             ->latest()
             ->get();
+    }
+
+    //change to show only events with user id
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
 }

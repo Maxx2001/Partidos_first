@@ -67,26 +67,6 @@
                 </p>
                 @enderror
             </div>
-
-            <div>
-                <label for="email" class="">
-                    {{ __('Email') }}:
-                </label>
-                <input
-                    id="email"
-                    type="email"
-                    class="border @error('email')  border-red-500 @enderror"
-                    name="email"
-                    value="{{ $user->email}}"
-                    required autocomplete="email"
-                    autofocus>
-
-                @error('email')
-                <p class="text-red-500 text-xs italic mt-4">
-                    {{ $message }}
-                </p>
-                @enderror
-            </div>
             <button type="submit">Update profiel</button>
 
         </form>
