@@ -9,7 +9,7 @@
             p-4
             m-4
             text-3xl"
-                >You're created events
+                >Your created events
                 </a>
             </h1>
         </div>
@@ -21,7 +21,7 @@
             p-4
             m-4
             text-3xl"
-                >You're invited events
+                >Your invited events
                 </a>
             </h1>
         </div>

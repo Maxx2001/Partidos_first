@@ -5,25 +5,13 @@ use App\Http\Controllers\Friendscontroller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TimeLineController;
+use App\Http\Controllers\InvitationController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 
 Auth::routes();
 
 Route::get('/portal', [HomeController::class, 'index'])->name('portal');
-//Route::get('/agenda', [HomeController::class, 'index'])->name('agenda');
-
 
 Route::middleware('auth')->group(function(){
 
@@ -39,13 +27,20 @@ Route::middleware('auth')->group(function(){
         'show' => 'created_events'
     ]);
 
+    //invitation route
+    Route::resource('invitation', InvitationController::class);
+    Route::get('/invitation/create/{event:id}', [InvitationController::class, 'create']);
+
     // Profile routes
     Route::get('/profile/{user:id}', [ProfileController::class, 'show'])->name('profile');
     Route::get('/profile/{user:id}/edit', [ProfileController::class, 'edit'])->name('edit_profile');
     Route::get('/profile/{user:id}/update', [ProfileController::class, 'update'])->name('update_profile');
 
     //Friend routes
-    Route::get('/friends', [Friendscontroller::class, 'index'])->name('friends');
-    Route::post('/addfriend', [Friendscontroller::class, 'create'])->name('add_friend');
+    Route::get('/explore_friends', [Friendscontroller::class, 'index'])->name('explore_friends');
+    Route::get('/friends/{user:id}', [Friendscontroller::class, 'show'])->name('friends');
+    Route::get('/addfriend/{user:id}', [Friendscontroller::class, 'create'])->name('add_friend');
+
+
 });
 

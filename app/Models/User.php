@@ -31,7 +31,19 @@ class User extends Authenticatable
     public function event()
     {
        return $this->hasMany(Event::class);
+    }
+
+    public function friends()
+    {
+        return $this->hasMany(Friends::class);
 
     }
+
+    //show a list of potential friends who are not yet friends
+    public function newFriends(User $user)
+    {
+        return Friends::where('friend_id', 2);
+    }
+
 
 }

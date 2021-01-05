@@ -15,7 +15,23 @@ class Friendscontroller extends Controller
             'users' => User::all()
         ]);
     }
-    public function create(Request $request, Friends $friends)
+    public function create($id)
     {
+        Friends::create([
+            'user_id' => auth()->id(),
+            'friend_id' => $id,
+            'status' => '1'
+        ]);
+        return view('friends.index',[
+            'users' => User::all()
+        ]);
     }
+    public function show($id)
+    {
+        return view('friends.friend_list', [
+            'friends' => User::find($id)->friends
+        ]);
+    }
+
+
 }

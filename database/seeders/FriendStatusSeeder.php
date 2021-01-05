@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Status;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class StatusSeeder extends Seeder
+class FriendStatusSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,16 +14,16 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('status')->insert([
+        DB::table('friend_status')->insert([
             'status' => 'Pending',
         ]);
-        DB::table('status')->insert([
+        DB::table('friend_status')->insert([
             'status' => 'Accepted',
         ]);
-        DB::table('status')->insert([
+        DB::table('friend_status')->insert([
             'status' => 'Declined',
         ]);
-        DB::table('status')->insert([
+        DB::table('friend_status')->insert([
             'status' => 'Blocked',
         ]);
     }

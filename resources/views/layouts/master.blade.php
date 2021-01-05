@@ -21,7 +21,8 @@
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('create_event') }}">Create event</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('agenda') }}">Agenda</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('profile', $user = auth()->id()) }}">Profile</a></li>
-        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('friends')}}">Friends</a></li>
+        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('explore_friends')}}">Explore users</a></li>
+        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('friends', $user = auth()->id())}}">Friends</a></li>
         <li><a href="{{ route('logout') }}"
            class="
            border-2 m-3 py-2 px-4 rounded-2xl text-3xl"

@@ -5,18 +5,13 @@
         <p class="text-6xl text-center">Friends</p>
         <div class="flex flex-col items-center">
             @foreach($users as $user)
-                <p>{{ $user -> username }}</p>
-
-                <form action="{{ route('add_friend') }}" method="POST">
-                    @csrf
-                        <input
-                            type="hidden"
-                            name="user_two_id"
-                            value="{{ $user->username}}"
-                          >
-                    <button type="submit" class="">Add friend</button>
-                </form>
-
+                @if(auth()->user()->isnot($user))
+                    <p class="text-3xl">{{ $user -> username }}</p>
+                    <p>{{ $user -> id }}</p>
+                    <a href="{{ route('add_friend', $user) }}" class="border rounded-xl m-4 p-4">
+                        Add friend
+                    </a>
+                @endif
             @endforeach
         </div>
     </div>
