@@ -17,11 +17,23 @@ class EventController extends Controller
         ]);
     }
 
-    public function show(User $user, $id){
+    public function show_your_created_events()
+    {
         return view('event.created_events', [
-            'event' => User::find($id)->event
+            'event' => User::find(auth()->id())->event
         ]);
     }
+    public function show_your_invited_events()
+    {
+        return view('event.invited_events', [
+            'event' => User::find(auth()->id())
+        ]);
+    }
+//    public function show(User $user, $id){
+//        return view('event.created_events', [
+//            'event' => User::find($id)->event
+//        ]);
+//    }
 
     public function create()
     {
@@ -56,8 +68,12 @@ class EventController extends Controller
         return view('event.edit', compact('event'));
     }
 
-    public function update()
+    public function update(EventRequets $request, Event $event)
     {
+        $attributes = $request->validated();
+
+        $event->update($attributes);
+        return redirect(route('your_created_events'));
 
     }
 

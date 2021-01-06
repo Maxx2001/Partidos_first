@@ -24,8 +24,12 @@ Route::middleware('auth')->group(function(){
         'create' => 'create_event',
         'store' => 'create',
         'destroy' => 'delete_event',
-        'show' => 'created_events'
+        'update' => 'update_event',
+        'show' => 'created_events',
     ]);
+
+    Route::get('/your_created_events', [EventController::class, 'show_your_created_events'])->name('your_created_events');
+    Route::get('/your_invited_events', [EventController::class, 'show_your_invited_events'])->name('your_invited_events');
 
     //invitation route
     Route::resource('invitation', InvitationController::class);
