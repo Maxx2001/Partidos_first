@@ -12,7 +12,10 @@
                         Add friend
                     </a>
                 @endif
+
+
             @endforeach
+
         </div>
     </div>
 @endsection

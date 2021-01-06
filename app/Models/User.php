@@ -40,10 +40,6 @@ class User extends Authenticatable
     }
 
     //show a list of potential friends who are not yet friends
-    public function newFriends(User $user)
-    {
-        return Friends::where('friend_id', 2);
-    }
 
 
 }

@@ -9,17 +9,17 @@ use App\Http\Requests\ProfileRequest;
 
 class ProfileController extends Controller
 {
-    public function show($id)
+    public function show()
     {
         return view('profile.profile', [
-            'user' => User::find($id)
+            'user' => User::find(auth()->id())
         ]);
     }
 
-    public function edit($id)
+    public function edit()
     {
         return view('profile.edit_profile', [
-            'user' => User::find($id)
+            'user' => User::find(auth()->id())
         ]);
     }
 
