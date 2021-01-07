@@ -23,6 +23,7 @@
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('profile')}}">Profile</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('explore_friends')}}">Explore users</a></li>
         <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('friends')}}">Friends</a></li>
+        <li><a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('show_friend_request')}}">Friend request</a></li>
         <li><a href="{{ route('logout') }}"
            class="
            border-2 m-3 py-2 px-4 rounded-2xl text-3xl"

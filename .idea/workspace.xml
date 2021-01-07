@@ -23,11 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/invitation/your_invited_events.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/FriendSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/friends/friend_request.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvitationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvitationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invitation/invitations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invitation/invitations.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,11 +197,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/friends" />
       <recent name="$PROJECT_DIR$/resources/views/invitation" />
       <recent name="$PROJECT_DIR$/app/Http/Requests/Event" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/views/event" />
-      <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -207,19 +210,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -261,7 +251,8 @@
       <workItem from="1609924285643" duration="668000" />
       <workItem from="1609929718637" duration="6295000" />
       <workItem from="1609956111145" duration="12679000" />
-      <workItem from="1610007687186" duration="12787000" />
+      <workItem from="1610007687186" duration="19368000" />
+      <workItem from="1610043859171" duration="5099000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,8 @@ class User extends Authenticatable
 
     public function friends()
     {
-        return $this->hasMany(Friends::class);
+        return $this->hasMany(Friends::class)
+            ->where('status', '=', 2);
 
     }
 
@@ -43,6 +44,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Invitation::class);
     }
+
 
 
     //show a list of potential friends who are not yet friends

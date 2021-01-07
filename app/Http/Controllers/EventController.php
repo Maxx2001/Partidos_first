@@ -47,7 +47,7 @@ class EventController extends Controller
             'end_time' => $request['end_time']
         ]);
 
-        return redirect("/");
+        return redirect('/your_created_events');
     }
 
     public function destroy($id)
