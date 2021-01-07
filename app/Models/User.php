@@ -39,6 +39,12 @@ class User extends Authenticatable
 
     }
 
+    public function inventations()
+    {
+        return $this->hasMany(Invitation::class);
+    }
+
+
     //show a list of potential friends who are not yet friends
 
 

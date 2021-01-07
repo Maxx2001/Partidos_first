@@ -29,11 +29,15 @@ Route::middleware('auth')->group(function(){
     ]);
 
     Route::get('/your_created_events', [EventController::class, 'show_your_created_events'])->name('your_created_events');
-    Route::get('/your_invited_events', [EventController::class, 'show_your_invited_events'])->name('your_invited_events');
 
     //invitation route
+//    Route::resource('invitation', InvitationController::class);
     Route::resource('invitation', InvitationController::class);
     Route::get('/invitation/create/{event:id}', [InvitationController::class, 'create']);
+    Route::get('/your_invited_events', [InvitationController::class, 'show_your_invited_events'])->name('your_invited_events');
+
+
+
 
     // Profile routes
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');

@@ -19,7 +19,7 @@
                     </form>
                 </div>
                 <div class="flex">
-                    <a href="/invitation" class="border p-2 m-2 w-28 rounded">Invention list</a>
+                    <a href="/invitation/{{$data->id}}" class="border p-2 m-2 w-28 rounded">Invitation list</a>
                     <a href="/invitation/create/{{ $data->id }}" class="border p-2 m-2 w-28 rounded">Invite friends</a>
                 </div>
             </div>
@@ -30,21 +30,3 @@
     @endforelse
 @endsection
 
-
-
-
-{{--            <div class="flex justify-center">--}}
-{{--                <a href="/event/{{$data->id}}/edit" class="border p-2 m-2 w-28 rounded">Edit event</a>--}}
-{{--                <form action="{{route('delete_event', $data)}}" method="POST">--}}
-{{--                    @csrf--}}
-{{--                    <input name="_method" type="hidden" value="DELETE">--}}
-{{--                    <button class="border p-2 m-2  w-28 rounded">Delete event</button>--}}
-{{--                </form>--}}
-
-{{--            </div>--}}
-
-{{--            <div class="flex justify-center"></div>--}}
-{{--            <a href="/invitation" class="border p-2 m-2 w-28 rounded">Invention list</a>--}}
-{{--            <a href="/invitation" class="border p-2 m-2 w-28 rounded">Invite friends</a>--}}
-
-{{--    </div>--}}

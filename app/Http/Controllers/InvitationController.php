@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+use App\Models\Invitation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class InvitationController extends Controller
 {
@@ -14,7 +17,7 @@ class InvitationController extends Controller
      */
     public function index()
     {
-        return view('invitation.index');
+//        return view('invitation.index');
     }
 
     /**
@@ -24,8 +27,9 @@ class InvitationController extends Controller
      */
     public function create($id)
     {
-        return view('invitation.create', [
-            'friends' => User::find(auth()->id())->friends
+        return view('invitation.invite_friends', [
+            'friends' => User::find(auth()->id())->friends,
+            'event_id' => $id
         ]);
     }
 
@@ -35,28 +39,45 @@ class InvitationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Invitation $invitation)
     {
+        Invitation::create([
+            'user_id' => $request['friend_id'],
+            'event_id' => $request['event_id'],
+            'status_id' => 1
+        ]);
 
+        return Redirect::back();
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function show($id)
     {
+        return view('invitation.show', [
+            'invitations' => Event::find($id)->invitations
+        ]);
 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
+    public function show_your_invited_events()
+    {
+        return view('invitation.invitations', [
+            'invitations' => User::find(auth()->id())->inventations
+        ]);
+
+    }/**
+ *
+ * Show the form for editing the specified resource.
+ *
+ * @param  int  $id
+ * @return \Illuminate\Http\Response
+ */
     public function edit($id)
     {
         //
@@ -82,6 +103,8 @@ class InvitationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Invitation::destroy($id);
+
+        return Redirect::back();
     }
 }

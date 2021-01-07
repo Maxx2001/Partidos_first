@@ -23,12 +23,7 @@ class EventController extends Controller
             'event' => User::find(auth()->id())->event
         ]);
     }
-    public function show_your_invited_events()
-    {
-        return view('event.invited_events', [
-            'event' => User::find(auth()->id())
-        ]);
-    }
+
 //    public function show(User $user, $id){
 //        return view('event.created_events', [
 //            'event' => User::find($id)->event
