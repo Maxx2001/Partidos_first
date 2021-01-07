@@ -58,7 +58,7 @@ class InvitationController extends Controller
      */
     public function show($id)
     {
-        return view('invitation.show', [
+        return view('invitation.invitations', [
             'invitations' => Event::find($id)->invitations
         ]);
 
@@ -67,10 +67,9 @@ class InvitationController extends Controller
 
     public function show_your_invited_events()
     {
-        return view('invitation.invitations', [
+        return view('invitation.your_invited_events',[
             'invitations' => User::find(auth()->id())->inventations
         ]);
-
     }/**
  *
  * Show the form for editing the specified resource.

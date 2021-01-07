@@ -23,20 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/invitation/invitations.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/invitation/invite_friends.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/invitation/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/invitation/your_invited_events.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvitationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvitationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Invitation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Invitation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_05_124617_create_invitation_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_05_124617_create_invitations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/event/created_events.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/created_events.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/event/invited_events.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invitation/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invitation/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/invitations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invitation/invitations.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -270,7 +261,7 @@
       <workItem from="1609924285643" duration="668000" />
       <workItem from="1609929718637" duration="6295000" />
       <workItem from="1609956111145" duration="12679000" />
-      <workItem from="1610007687186" duration="6726000" />
+      <workItem from="1610007687186" duration="12787000" />
     </task>
     <servers />
   </component>
