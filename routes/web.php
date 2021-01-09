@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function(){
     Route::get('/invitations',[InvitationController::class, 'show_your_invited_events'])->name('your_invited_events');
     Route::get('/invitation/create/{event:id}', [InvitationController::class, 'create']);
     Route::get('/invited_to_your_event', [InvitationController::class, 'show_your_invited_events'])->name('invited_to_your_event');
+    Route::get('/your_invites', [InvitationController::class, 'show_your_invites'])->name('your_invites');
+    Route::get('/accept_invite/{invitation:id}', [InvitationController::class, 'accept_invite'])->name('accept_invite');
+    Route::get('/decline_invite/{invitation:id}', [InvitationController::class, 'decline_invite'])->name('decline_invite');
 
 
 

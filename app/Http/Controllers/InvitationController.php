@@ -50,6 +50,26 @@ class InvitationController extends Controller
         return Redirect::back();
     }
 
+    public function accept_invite($id)
+    {
+        $invitation = Invitation::find($id);
+
+        $invitation->status_id = 2;
+        $invitation->save();
+
+        return redirect('/invitations');
+    }
+
+    public function decline_invite($id)
+    {
+        $invitation = Invitation::find($id);
+
+        $invitation->status_id = 3;
+        $invitation->save();
+
+        return redirect('/invitations');
+    }
+
     /**
      * Display the specified resource.
      *
@@ -68,9 +88,22 @@ class InvitationController extends Controller
     public function show_your_invited_events()
     {
         return view('invitation.your_invited_events',[
-            'invitations' => User::find(auth()->id())->inventations
+            'invitations' => User::find(auth()->id())
+                ->inventations
+                ->where('status_id', '=', 2)
         ]);
-    }/**
+    }
+
+    public function show_your_invites()
+    {
+        return view('invitation.invites', [
+            'invitations' => User::find(auth()->id())
+                ->inventations
+                ->where('status_id', '=', 1)
+        ]);
+    }
+
+    /**
  *
  * Show the form for editing the specified resource.
  *

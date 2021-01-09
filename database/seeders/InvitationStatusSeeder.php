@@ -25,5 +25,9 @@ class InvitationStatusSeeder extends Seeder
         DB::table('invitation_status')->insert([
             'status' => 'Declined',
         ]);
+
+        DB::table('invitation_status')->insert([
+            'status' => 'Maybe',
+        ]);
     }
 }

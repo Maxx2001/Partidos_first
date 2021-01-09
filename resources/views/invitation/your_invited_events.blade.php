@@ -5,6 +5,7 @@
     @forelse($invitations as $invitation)
         <div class="border m-4 p-4 rounded-xl">
             <p>Eventname: {{ \App\Models\Event::find($invitation->event_id)->eventname }}</p>
+            <p>Host: {{\App\Models\User::find(\App\Models\Event::find($invitation->event_id)->user_id )->username}}</p>
             <p>Locatie: {{ \App\Models\Event::find($invitation->event_id)->location }}</p>
             <p>Datum: {{ \App\Models\Event::find($invitation->event_id)->date }}</p>
             <p>Start tijd: {{ \App\Models\Event::find($invitation->event_id)->start_time }}</p>
@@ -18,6 +19,7 @@
             <p class="text-5xl">No events yet</p>
         </div>
     @endforelse
+
 @endsection
 
 

@@ -15,6 +15,19 @@
         </div>
 
         <div>
+            <h1><a href="{{ route('your_invites')}}" class="
+            border
+            rounded-xl
+            p-4
+            m-4
+            text-3xl"
+                >Your invites
+                </a>
+            </h1>
+        </div>
+
+
+        <div>
             <h1><a href="{{ route('your_invited_events') }}" class="
             border
             rounded-xl
