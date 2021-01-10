@@ -37,7 +37,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Friends::class)
             ->where('status', '=', 2);
-
     }
 
     public function inventations()

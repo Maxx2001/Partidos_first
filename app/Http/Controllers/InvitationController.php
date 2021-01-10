@@ -84,23 +84,34 @@ class InvitationController extends Controller
 
     }
 
-
     public function show_your_invited_events()
     {
-        return view('invitation.your_invited_events',[
-            'invitations' => User::find(auth()->id())
-                ->inventations
-                ->where('status_id', '=', 2)
-        ]);
+        $events = [];
+
+        $inventations = User::find(auth()->id())
+            ->inventations
+            ->where('status_id', '=', 2);
+
+        foreach ($inventations as $inventation){
+           $events[] = Event::find($inventation->event_id);
+        }
+
+        return view('invitation.your_invited_events', compact("events"));
     }
 
     public function show_your_invites()
     {
-        return view('invitation.invites', [
-            'invitations' => User::find(auth()->id())
-                ->inventations
-                ->where('status_id', '=', 1)
-        ]);
+        $events = [];
+
+        $invites = User::find(auth()->id())
+            ->inventations
+            ->where('status_id', '=', 1);
+
+        foreach ($invites as $invite){
+            $events[] = Event::find($invite->event_id);
+        }
+
+        return view('invitation.invites', compact("events"));
     }
 
     /**

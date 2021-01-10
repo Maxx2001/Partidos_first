@@ -15,7 +15,6 @@ Route::get('/portal', [HomeController::class, 'index'])->name('portal');
 
 Route::middleware('auth')->group(function(){
 
-
     Route::get('/', [TimeLineController::class, 'index'])->name('timeline');
 
     //event routes
@@ -38,8 +37,6 @@ Route::middleware('auth')->group(function(){
     Route::get('/your_invites', [InvitationController::class, 'show_your_invites'])->name('your_invites');
     Route::get('/accept_invite/{invitation:id}', [InvitationController::class, 'accept_invite'])->name('accept_invite');
     Route::get('/decline_invite/{invitation:id}', [InvitationController::class, 'decline_invite'])->name('decline_invite');
-
-
 
     // Profile routes
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');

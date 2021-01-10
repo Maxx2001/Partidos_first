@@ -30,19 +30,33 @@ class Friendscontroller extends Controller
     }
     public function show()
     {
-        return view('friends.friend_list', [
-            'friends' => User::find(auth()->id())
-                ->friends
-        ]);
+        $friend_list = [];
+
+        $friends = User::find(auth()->id())
+            ->friends
+        ->where('status', "=", "2");
+
+        foreach ($friends as $friend) {
+            $friend_list[] = User::find($friend->friend_id);
+        };
+
+        return view('friends.friend_list', compact('friend_list'));
     }
 
     public function show_friend_request()
     {
-        return view('friends.friend_request', [
-            'friend_requests' => Friends::all()
-                ->where("friend_id", "=", auth()->id())
-                ->where('status', '=', 1)
-        ]);
+        $friend_requests = [];
+
+        $users = Friends::all()
+            ->where("friend_id", "=", auth()->id())
+            ->where('status', '=', 1);
+
+        foreach ($users as $user)
+        {
+            $friend_requests[] = User::find($user->user_id);
+        }
+
+        return view('friends.friend_request', compact('friend_requests'));
     }
 
     public function accept_request(Friends $friends,Request $request, $id)
