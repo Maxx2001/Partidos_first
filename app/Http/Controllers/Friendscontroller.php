@@ -40,23 +40,28 @@ class Friendscontroller extends Controller
             $friend_list[] = User::find($friend->friend_id);
         };
 
-        return view('friends.friend_list', compact('friend_list'));
+        return view('friends.friend_list', compact('friends'));
     }
 
     public function show_friend_request()
     {
-        $friend_requests = [];
+        $user_list= [];
 
-        $users = Friends::all()
+        $friends = Friends::all()
             ->where("friend_id", "=", auth()->id())
             ->where('status', '=', 1);
 
-        foreach ($users as $user)
-        {
-            $friend_requests[] = User::find($user->user_id);
-        }
+//        foreach ($friends as $user)
+//        {
+//            $user_list[] = User::find($user->user_id);
+//        }
 
-        return view('friends.friend_request', compact('friend_requests'));
+        return view('friends.friend_request', compact('friends'));
+//        return view('friends.friend_request', [
+//            'user_list' => $user_list,
+//            'friend_requests' => $friends
+//        ]);
+
     }
 
     public function accept_request(Friends $friends,Request $request, $id)
@@ -87,8 +92,8 @@ class Friendscontroller extends Controller
 
     public function destroy($id)
     {
+        $friend = Friends::find($id);
         Friends::destroy($id);
-
         return redirect('/friends');
     }
 
