@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -30,13 +29,15 @@ class User extends Authenticatable
 
     public function event()
     {
-       return $this->hasMany(Event::class);
+        return $this->hasMany(Event::class);
     }
 
     public function friends()
     {
-        return $this->hasMany(Friends::class)
-            ->where('status', '=', 2);
+        return $this->hasMany(FriendRequest::class)
+            ->where('status', '=', 2)
+            ->where('user_id', '=', auth()->id())
+            ->orWhere('friend_id', '=', auth()->id());
     }
 
     public function inventations()
@@ -44,9 +45,12 @@ class User extends Authenticatable
         return $this->hasMany(Invitation::class);
     }
 
-
-
-    //show a list of potential friends who are not yet friends
-
-
+    public function friend()
+    {
+       return $this->hasManyThrough(FriendRequest::class, User::class);
+//            ->when('id' === auth()->id() , function () {
+//                $this->hasMany(FriendRequest::class)
+//                    ->where('status', '=', 2);
+//            });
+    }
 }

@@ -23,12 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/seeders/FriendRequestsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Partidos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Partidos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/agenda.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agenda.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Friends.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/FriendRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/TelescopeServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/TelescopeServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_104209_create_friends_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/FriendSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/telescope/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/telescope/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/telescope/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/telescope/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/friends/friend_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/friends/friend_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/friends/friend_request.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/friends/friend_request.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +179,7 @@
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-activitylog" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kbS482S9n6sIORrJffEt3ZIxr5" />
@@ -190,6 +203,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -210,19 +224,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -269,7 +270,11 @@
       <workItem from="1610142052337" duration="4115000" />
       <workItem from="1610185462980" duration="7306000" />
       <workItem from="1610283564512" duration="9137000" />
-      <workItem from="1610348977222" duration="8491000" />
+      <workItem from="1610348977222" duration="20260000" />
+      <workItem from="1610375413034" duration="10000" />
+      <workItem from="1610377266075" duration="4347000" />
+      <workItem from="1610439850114" duration="8184000" />
+      <workItem from="1610453895640" duration="1882000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             FriendStatusSeeder::class,
             InvitationStatusSeeder::class,
-            FriendSeeder::class
+            FriendRequestsSeeder::class
         ]);
     }
 }
