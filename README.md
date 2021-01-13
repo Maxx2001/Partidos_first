@@ -1,4 +1,6 @@
-<h1>Partidos </h1>
+#Partidos 
+
+##Run this project
 
 Partidos is a web application that helps my friens and I plan fun evenets
 

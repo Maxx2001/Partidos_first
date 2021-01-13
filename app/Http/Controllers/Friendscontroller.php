@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\FriendRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class Friendscontroller extends Controller
@@ -39,7 +40,7 @@ class Friendscontroller extends Controller
     {
         $friend_list = [];
 
-        $friends = User::find(auth()->id())
+        $friends = Auth::user()
             ->friends
             ->where('status', "=", "2");
 

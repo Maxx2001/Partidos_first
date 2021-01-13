@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Requests\ProfileRequest;
-
+use Illuminate\Support\Facades\Auth;
 
 
 class ProfileController extends Controller
@@ -12,14 +12,14 @@ class ProfileController extends Controller
     public function show()
     {
         return view('profile.profile', [
-            'user' => User::find(auth()->id())
+            'user' => Auth::user()
         ]);
     }
 
     public function edit()
     {
         return view('profile.edit_profile', [
-            'user' => User::find(auth()->id())
+            'user' => Auth::user()
         ]);
     }
 
