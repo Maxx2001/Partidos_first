@@ -47,10 +47,14 @@ class User extends Authenticatable
 
     public function friend()
     {
-       return $this->hasManyThrough(FriendRequest::class, User::class);
-//            ->when('id' === auth()->id() , function () {
-//                $this->hasMany(FriendRequest::class)
-//                    ->where('status', '=', 2);
-//            });
+        $query = $this->hasMany(FriendRequest::class)
+            ->where('status', '=', 2);
+
+        return $query;
+//
+//        $query->when(request('filter_by') == 'likes', function ($q) {
+//            return $q->where('likes', '>', request('likes_amount', 0));
+//        });
+
     }
 }

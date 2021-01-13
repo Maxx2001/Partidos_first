@@ -38,11 +38,21 @@ class Friendscontroller extends Controller
     }
     public function show()
     {
-        $friend_list = [];
+        $friends = [];
 
-        $friends = Auth::user()
+        $friend_list = Auth::user()
             ->friends
             ->where('status', "=", "2");
+
+
+        foreach ($friend_list as $friend)
+        {
+            if ($friend->user_id == auth()->id())
+            {
+                $friend->user_id = $friend->friend_id;
+            }
+            $friends[] = User::find($friend->user_id);
+        }
 
         return view('friends.friend_list', compact('friends'));
     }
