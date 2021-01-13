@@ -1296,7 +1296,7 @@ module.exports = (
       };
     })() :
 
-  // Non standard browser .env (web workers, react-native) lack needed support.
+  // Non standard browser env (web workers, react-native) lack needed support.
     (function nonStandardBrowserEnv() {
       return {
         write: function write() {},
@@ -19419,8 +19419,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/max/Documents/Projects/Own projects/Partidos/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/max/Documents/Projects/Own projects/Partidos/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /home/max/Documents/Projects/OwnProjects/Partidos_first/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/max/Documents/Projects/OwnProjects/Partidos_first/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

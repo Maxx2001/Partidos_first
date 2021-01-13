@@ -52,6 +52,5 @@ Route::middleware('auth')->group(function(){
     Route::get('/accept_request/{friend:id}', [Friendscontroller::class, 'accept_request'])->name('accept_request');
     Route::get('/decline_request/{friend:id}', [Friendscontroller::class, 'decline_request'])->name('decline_request');
 
-
 });
 

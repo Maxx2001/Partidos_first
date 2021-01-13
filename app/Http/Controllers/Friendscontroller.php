@@ -44,12 +44,6 @@ class Friendscontroller extends Controller
             ->friends
             ->where('status', "=", "2");
 
-
-
-//        foreach ($friends as $friend) {
-//            $friend_list[] = User::find($friend->friend_id);
-//        };
-
         return view('friends.friend_list', compact('friends'));
     }
 
