@@ -4,8 +4,10 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\Friendscontroller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\TimeLineController;
 use App\Http\Controllers\InvitationController;
+use Illuminate\Support\LazyCollection;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,7 +46,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/profile/{user:id}/update', [ProfileController::class, 'update'])->name('update_profile');
 
     //Friend routes
-    Route::get('/explore_friends', [Friendscontroller::class, 'index'])->name('explore_friends');
+    Route::get('/explore_friends', [ShowUserController::class, 'index'])->name('explore_friends');
     Route::get('/friends', [Friendscontroller::class, 'show'])->name('friends');
     Route::get('/addfriend/{user:id}', [Friendscontroller::class, 'create'])->name('add_friend');
     Route::delete('/friend/{user:id}', [Friendscontroller::class, 'destroy'])->name('remove_friend');
@@ -52,5 +54,15 @@ Route::middleware('auth')->group(function(){
     Route::get('/accept_request/{friend:id}', [Friendscontroller::class, 'accept_request'])->name('accept_request');
     Route::get('/decline_request/{friend:id}', [Friendscontroller::class, 'decline_request'])->name('decline_request');
 
+});
+
+Route::get('/test', function() {
+    $collection = LazyCollection::times(10000000)
+        ->map( function ($number) {
+            return pow(2, $number);
+        })
+        ->all();
+
+    return 'done';
 });
 

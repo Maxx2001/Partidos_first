@@ -13,7 +13,7 @@ class Friendscontroller extends Controller
     public function index(User $user)
     {
         return view('friends.index', [
-            'users' => User::all(),
+            //
         ]);
     }
     public function create($id)
@@ -30,9 +30,7 @@ class Friendscontroller extends Controller
             ->withProperties($friend->toArray())
             ->log('Een vriendschaps verzoek');
 
-        return view('friends.index',[
-            'users' => User::all()
-        ]);
+        return redirect(route('explore_friends'));
     }
     public function show()
     {

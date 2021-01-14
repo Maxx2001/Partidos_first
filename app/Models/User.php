@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Searchable
 {
     use HasFactory, Notifiable;
 
@@ -26,6 +28,17 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('explore_friends', $this->username);
+
+        return new \Spatie\Searchable\SearchResult(
+            $this,
+            $this->username,
+            $url
+        );
+    }
 
     public function event()
     {
@@ -51,10 +64,7 @@ class User extends Authenticatable
             ->where('status', '=', 2);
 
         return $query;
-//
-//        $query->when(request('filter_by') == 'likes', function ($q) {
-//            return $q->where('likes', '>', request('likes_amount', 0));
-//        });
-
     }
+
+
 }
