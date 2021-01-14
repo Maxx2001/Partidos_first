@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <p class="text-6xl text-center">Friends</p>
+        <p class="text-6xl text-center">Explore friends</p>
         <div class="flex flex-col items-center">
             @foreach($users as $user)
                 @if(auth()->user()->isnot($user))

@@ -18,9 +18,4 @@
             </div>
         @endforelse
     </div>
-    <div class="mt-16">
-        <a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('show_friend_request')}}">Friend requests</a>
-        <a class="border-2 m-3 py-2 px-4 rounded-2xl text-3xl" href="{{ route('explore_friends')}}">Explore users</a>
-
-    </div>
 @endsection

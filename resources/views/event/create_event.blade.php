@@ -5,21 +5,6 @@
         <div class="flex flex-col justify-center items-center">
             @csrf
             <div class="p-3">
-                <label for="location">location:</label>
-                <input
-                    type="text"
-                    name="location"
-                    value="{{ old('location') }}"
-                    required autocomplete="location"
-                    autofocus class="border">
-            </div>
-            @error('location')
-                <p class="text-red-500 text-sm mt-2">{{$message}}</p>
-            @enderror
-
-
-
-            <div class="p-3">
                 <label for="eventname">Eventname: </label>
                 <input
                     type="text"
@@ -31,6 +16,20 @@
             @error('eventname')
                 <p class="text-red-500 text-sm mt-2">{{$message}}</p>
             @enderror
+
+            <div class="p-3">
+                <label for="location">location:</label>
+                <input
+                    type="text"
+                    name="location"
+                    value="{{ old('location') }}"
+                    required autocomplete="location"
+                    autofocus class="border">
+            </div>
+            @error('location')
+            <p class="text-red-500 text-sm mt-2">{{$message}}</p>
+            @enderror
+
 
             <div class="p-3">
                 <label for="date">Datum:</label>

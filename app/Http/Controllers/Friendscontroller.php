@@ -14,8 +14,6 @@ class Friendscontroller extends Controller
     {
         return view('friends.index', [
             'users' => User::all(),
-            'friends' => User::find(auth()->id())->friends
-
         ]);
     }
     public function create($id)
