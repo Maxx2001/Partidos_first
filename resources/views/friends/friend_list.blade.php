@@ -4,7 +4,6 @@
     <div class="border rounded-xl">
         @forelse($friends as $friend)
             <div class="border m-2 p-4 flex">
-{{--                <p class="m-1">Name: {{\App\Models\User::find($friend->friend_id)->username}}</p>--}}
                 <p class="m-1">Name:{{ $friend->username }}</p>
 {{--                <form action="{{route('remove_friend', $friend)}}" method="POST">--}}
 {{--                    @csrf--}}

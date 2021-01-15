@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\Invitation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class InvitationController extends Controller
@@ -27,8 +28,23 @@ class InvitationController extends Controller
      */
     public function create($id)
     {
+        $friends = [];
+
+        $friend_list = Auth::user()
+            ->friends
+            ->where('status', "=", "2");
+
+        foreach ($friend_list as $friend)
+        {
+            if ($friend->user_id == auth()->id())
+            {
+                $friend->user_id = $friend->friend_id;
+            }
+            $friends[] = User::find($friend->user_id);
+        }
+
         return view('invitation.invite_friends', [
-            'friends' => User::find(auth()->id())->friends,
+            'friends' => $friends,
             'event_id' => $id
         ]);
     }
@@ -79,7 +95,9 @@ class InvitationController extends Controller
     public function show($id)
     {
         return view('invitation.invitations', [
-            'invitations' => Event::find($id)->invitations
+            'invitations' => Event::find($id)
+                ->invitations
+                ->where('status_id', '=', 2)
         ]);
 
     }

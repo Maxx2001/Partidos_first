@@ -7,9 +7,9 @@
     @foreach($friends as $friend)
         <form action="\invitation" method="POST">
             @csrf
-            <input type="hidden" name="friend_id" value="{{ $friend->friend_id }}">
+            <input type="hidden" name="friend_id" value="{{ $friend->id }}">
             <input type="hidden" name="event_id" value="{{ $event_id}}">
-            <button type="post" class="border rounded-xl p-2 m-2">Name: {{\App\Models\User::find($friend->friend_id)->username}}
+            <button type="post" class="border rounded-xl p-2 m-2">Name: {{$friend->username}}
             </button>
         </form>
 

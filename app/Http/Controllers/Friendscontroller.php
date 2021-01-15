@@ -55,11 +55,20 @@ class Friendscontroller extends Controller
 
     public function show_friend_request()
     {
-        $user_list= [];
+        $friend_list= [];
 
         $friends = FriendRequest::all()
             ->where("friend_id", "=", auth()->id())
             ->where('status', '=', 1);
+
+        foreach ($friend_list as $friend)
+        {
+            if ($friend->user_id == auth()->id())
+            {
+                $friend->user_id = $friend->friend_id;
+            }
+            $friends[] = User::find($friend->user_id);
+        }
 
         return view('friends.friend_request', compact('friends'));
     }

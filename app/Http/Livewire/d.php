@@ -1,28 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Livewire;
 
 use App\Models\User;
+use Livewire\Component;
 use Spatie\Searchable\Search;
-use Spatie\Searchable\Searchable;
-use Spatie\Searchable\SearchResult;
 
-
-class ShowUserController extends Controller
+class d extends Component
 {
-    public function index(Search $search)
-    {
-        $find = '';
+    public $find = '';
 
+    public function render()
+    {
         $users = $searchResults = (new Search())
             ->registerModel(User::class, 'username')
-            ->search($find);
+            ->search($this->find);
 //        return $users;
 
 //        return view('friends.index', compact('users'));
         return view('friends.index', [
             'users' => $users,
-            'find' => $find
+            'find' => $this->find
         ]);
     }
 }
