@@ -31,7 +31,7 @@ class User extends Authenticatable implements Searchable
 
     public function getSearchResult(): SearchResult
     {
-        $url = route('explore_friends', $this->username);
+        $url = route('explore_users', $this->username);
 
         return new \Spatie\Searchable\SearchResult(
             $this,

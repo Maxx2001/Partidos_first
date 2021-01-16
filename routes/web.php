@@ -46,7 +46,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/profile/{user:id}/update', [ProfileController::class, 'update'])->name('update_profile');
 
     //Friend routes
-    Route::get('/explore_friends', [Friendscontroller::class, 'index'])->name('explore_friends');
+    Route::get('/explore_users', [Friendscontroller::class, 'index'])->name('explore_users');
     Route::get('/friends', [Friendscontroller::class, 'show'])->name('friends');
     Route::get('/addfriend/{user:id}', [Friendscontroller::class, 'create'])->name('add_friend');
     Route::delete('/friend/{user:id}', [Friendscontroller::class, 'destroy'])->name('remove_friend');
