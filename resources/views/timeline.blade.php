@@ -13,7 +13,8 @@
                 <p class="m-1">Start tijd: {{$data->start_time}}</p>
                 <p class="m-1">Eind tijd: {{$data->end_time}}</p>
             </div>
-            @endforeach
+        @empty
+            @endforelse
     </div>
 @endsection
 

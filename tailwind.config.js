@@ -4,10 +4,14 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
-    extend: {}
+    extend: {},
+      colors: {
+        blue: {
+            light: '#96D4E5'
+        }
+      }
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/ui'),
   ]
 }
