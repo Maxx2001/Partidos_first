@@ -13,23 +13,23 @@ class EventController extends Controller
 {
     public function index(User $user)
     {
-        return view('agenda', [
-            'event' => User::find(1)->event
+        return view('event.index', [
+            'events' => Auth::user()->event
         ]);
     }
 
-    public function show_your_created_events()
-    {
-        return view('event.created_events', [
-            'event' => User::find(auth()->id())->event
-        ]);
-    }
-
-//    public function show(User $user, $id){
+//    public function show_your_created_events()
+//    {
 //        return view('event.created_events', [
-//            'event' => User::find($id)->event
+//            'event' => User::find(auth()->id())->event
 //        ]);
 //    }
+
+    public function show($id){
+        return view('event.event', [
+            'event' => Event::find($id)
+        ]);
+    }
 
     public function create()
     {
@@ -54,14 +54,14 @@ class EventController extends Controller
             ->withProperties($event->toArray())
             ->log('Een nieuw event');
 
-        return redirect('/your_created_events');
+        return redirect(route('agenda'));
     }
 
     public function destroy($id)
     {
         Event::destroy($id);
 
-        return redirect('/event');
+        return redirect(route('agenda'));
     }
 
     public function edit(Event $event, User $user)
@@ -75,7 +75,8 @@ class EventController extends Controller
         $attributes = $request->validated();
 
         $event->update($attributes);
-        return redirect(route('your_created_events'));
+
+        return redirect(route('agenda'));
 
     }
 

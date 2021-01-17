@@ -4,7 +4,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\Friendscontroller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Livewire\d;
+use App\Http\Livewire\Notifications;
 use App\Http\Controllers\TimeLineController;
 use App\Http\Controllers\InvitationController;
 use Illuminate\Support\LazyCollection;
@@ -17,7 +17,6 @@ Route::get('/portal', [HomeController::class, 'index'])->name('portal');
 
 Route::middleware('auth')->group(function(){
 
-    Route::get('/', [TimeLineController::class, 'index'])->name('timeline');
 
     //event routes
     Route::resource('event', EventController::class)->names([
@@ -26,18 +25,21 @@ Route::middleware('auth')->group(function(){
         'store' => 'create',
         'destroy' => 'delete_event',
         'update' => 'update_event',
-        'show' => 'created_events',
+        'show' => 'event',
+        'edit' => 'edit_event',
     ]);
+    Route::get('/', [EventController::class, 'index'])->name('agenda');
+
 
     Route::get('/your_created_events', [EventController::class, 'show_your_created_events'])->name('your_created_events');
 
     //invitation route
     Route::resource('invitation', InvitationController::class);
     Route::get('/invitations',[InvitationController::class, 'show_your_invited_events'])->name('your_invited_events');
-    Route::get('/invitation/create/{event:id}', [InvitationController::class, 'create']);
+    Route::get('/invitation/create/{event:id}', [InvitationController::class, 'create'])->name('invite_friends');
     Route::get('/invited_to_your_event', [InvitationController::class, 'show_your_invited_events'])->name('invited_to_your_event');
     Route::get('/your_invites', [InvitationController::class, 'show_your_invites'])->name('your_invites');
-    Route::get('/accept_invite/{invitation:id}', [InvitationController::class, 'accept_invite'])->name('accept_invite');
+    Route::get('/accept_invite/{invitation:id}', [Notifications::class, 'accept_invite'])->name('accept_invite');
     Route::get('/decline_invite/{invitation:id}', [InvitationController::class, 'decline_invite'])->name('decline_invite');
 
     // Profile routes
@@ -53,6 +55,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/show_friend_request', [Friendscontroller::class, 'show_friend_request'])->name('show_friend_request');
     Route::get('/accept_request/{friend:id}', [Friendscontroller::class, 'accept_request'])->name('accept_request');
     Route::get('/decline_request/{friend:id}', [Friendscontroller::class, 'decline_request'])->name('decline_request');
+
+    Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 });
 

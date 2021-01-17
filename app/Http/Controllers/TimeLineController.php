@@ -9,7 +9,7 @@ class TimeLineController extends Controller
 {
     public function index(Event $event)
     {
-        return view('timeline', [
+        return view('home', [
             'event' => $event->events()
         ]);
     }
