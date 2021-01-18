@@ -2,7 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\FriendRequest;
 use App\Models\Invitation;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -10,13 +13,17 @@ class Notifications extends Component
 {
     public function render()
     {
-        $events = [];
-
         $invites = Auth::user()
             ->inventations;
 
+        $friend_requests = FriendRequest::all()
+            ->where("friend_id", "=", auth()->id())
+            ->where('status', '=', 1);
 
-        return view('livewire.notifications', compact('invites'));
+        return view('livewire.notifications', [
+            'invites' => $invites,
+            'friend_requests' => $friend_requests
+        ]);
     }
 
     public function accept_invite($id)
@@ -38,4 +45,5 @@ class Notifications extends Component
 
         return redirect(route('agenda'));
     }
+
 }

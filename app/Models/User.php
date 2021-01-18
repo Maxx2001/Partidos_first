@@ -10,7 +10,7 @@ use Spatie\Searchable\SearchResult;
 
 class User extends Authenticatable implements Searchable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Friendable, Inviting, FriendSearchable;
 
     /**
      * The attributes that are mass assignable.
@@ -29,50 +29,26 @@ class User extends Authenticatable implements Searchable
         'remember_token',
     ];
 
-    public function getSearchResult(): SearchResult
-    {
-        $url = route('explore_users', $this->username);
-
-        return new \Spatie\Searchable\SearchResult(
-            $this,
-            $this->username,
-            $url
-        );
-    }
-
     public function event()
     {
-
         return $this->hasMany(Event::class);
     }
 
-    public function friends()
+    public function isPending(User $user)
     {
         return $this->hasMany(FriendRequest::class)
+            ->where('friend_id', $user->id)
+            ->where('status', '=', 1)
+            ->exists();
+    }
+
+    public function isFriend(User $user)
+    {
+        return $this->friend()->where('friend_id', $user->id)
             ->where('status', '=', 2)
-            ->where('user_id', '=', auth()->id())
-            ->orWhere('friend_id', '=', auth()->id());
+            ->exists();
     }
 
-    public function inventations()
-    {
-        return $this->hasMany(Invitation::class)
-            ->where('status_id', '=', 1);
-    }
-
-    public function accepted_invites()
-    {
-        return $this->hasMany(Invitation::class)
-            ->where('status_id', '=', 2);
-    }
-
-    public function friend()
-    {
-        $query = $this->hasMany(FriendRequest::class)
-            ->where('status', '=', 2);
-
-        return $query;
-    }
 
 
 }

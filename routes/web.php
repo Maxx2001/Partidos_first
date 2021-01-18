@@ -43,14 +43,14 @@ Route::middleware('auth')->group(function(){
     Route::get('/decline_invite/{invitation:id}', [InvitationController::class, 'decline_invite'])->name('decline_invite');
 
     // Profile routes
-    Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('edit_profile');
+    Route::get('/profile/{user:id}', [ProfileController::class, 'show'])->name('profile');
     Route::get('/profile/{user:id}/update', [ProfileController::class, 'update'])->name('update_profile');
 
     //Friend routes
     Route::get('/explore_users', [Friendscontroller::class, 'index'])->name('explore_users');
     Route::get('/friends', [Friendscontroller::class, 'show'])->name('friends');
-    Route::get('/addfriend/{user:id}', [Friendscontroller::class, 'create'])->name('add_friend');
+    Route::post('/addfriend/{user:id}', [Friendscontroller::class, 'create'])->name('add_friend');
     Route::delete('/friend/{user:id}', [Friendscontroller::class, 'destroy'])->name('remove_friend');
     Route::get('/show_friend_request', [Friendscontroller::class, 'show_friend_request'])->name('show_friend_request');
     Route::get('/accept_request/{friend:id}', [Friendscontroller::class, 'accept_request'])->name('accept_request');

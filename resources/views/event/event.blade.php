@@ -41,16 +41,17 @@
                         <p> <i class="far fa-calendar"></i> {{$event->date}}</p>
                     </div>
                 </div>
+            @if($event->user_id == \Illuminate\Support\Facades\Auth::id())
+                <div class="mt-4">
+                    <a href="{{ route('edit_event', $event) }}">
+                        <p class="border rounded p-2 text-center text-4xl bg-blue bg-opacity-80">Edit event</p>
+                    </a>
 
-            <div class="mt-4">
-                <a href="{{ route('edit_event', $event) }}">
-                    <p class="border rounded p-2 text-center text-4xl bg-blue bg-opacity-80">Edit event</p>
-                </a>
-
-                <a href="{{ route('invite_friends', $event) }}">
-                    <p class="border rounded p-2 text-center text-4xl bg-blue bg-opacity-80 mt-4">Invite friends</p>
-                </a>
-            </div>
+                    <a href="{{ route('invite_friends', $event) }}">
+                        <p class="border rounded p-2 text-center text-4xl bg-blue bg-opacity-80 mt-4">Invite friends</p>
+                    </a>
+                </div>
+            @endif
         </div>
 
         <div class=" w-7/12">

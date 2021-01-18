@@ -6,8 +6,6 @@ use App\Models\User;
 use Livewire\Component;
 use Spatie\Searchable\Search;
 
-
-
 class FindUser extends Component
 {
     public $search = '';
@@ -17,8 +15,6 @@ class FindUser extends Component
         $users = (new Search())
             ->registerModel(User::class, 'username')
             ->search($search = $this->search);
-
-
         return view('livewire.find-user', compact('users'));
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="border h-64r">
+    <div class="border">
         <h1 class="text-6xl text-center">Edit Profile</h1>
         </div>
         <form action="{{ route('update_profile', $user) }}"
@@ -70,5 +70,5 @@
             <button type="submit">Update profiel</button>
 
         </form>
-    </div>
+
 @endsection

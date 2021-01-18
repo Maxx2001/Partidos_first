@@ -6,6 +6,7 @@ use App\Models\FriendRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 
 class Friendscontroller extends Controller
@@ -30,7 +31,7 @@ class Friendscontroller extends Controller
             ->withProperties($friend->toArray())
             ->log('Een vriendschaps verzoek');
 
-        return redirect(route('explore_friends'));
+        return Redirect::back();
     }
     public function show()
     {

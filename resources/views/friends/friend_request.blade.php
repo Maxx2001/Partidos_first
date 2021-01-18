@@ -12,6 +12,7 @@
                     <button type="submit" class="border rounded-xl p-2">Accept request</button>
                 </form>
                 <p class="border rounded-xl p-2 "><a href="{{ route('decline_request', $friend) }}">Decline request</a></p>
+
             </div>
 
         @endforeach

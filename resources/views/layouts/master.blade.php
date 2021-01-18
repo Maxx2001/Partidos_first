@@ -47,7 +47,7 @@
                 </li>
 
                 <li class="py-4 px-6">
-                    <a href="{{ route('profile') }}">
+                    <a href="{{ route('profile', $user = \Illuminate\Support\Facades\Auth::user()) }}">
                         <div class="text-center">
                             <i class="far fa-user"></i>
                             <p class="">Profile</p>
@@ -72,10 +72,7 @@
             </div>
 
             <div class="bg-gray flex-grow pt-8 flex flex-col items-center">
-                <div class="border rounded-xl bg-gray-dark w-42 h-12 flex items-center text-2xl pl-2 w-4/5">
-                    <i class="fas fa-search"></i>
-                    Search users
-                </div>
+                @livewire('find-user')
 
                 <div class="border rounded-xl bg-gray-dark w-42 h-96 flex flex-col text-2xl pl-2 w-4/5 mt-8">
                     <div class="flex justify-center mt-4">
