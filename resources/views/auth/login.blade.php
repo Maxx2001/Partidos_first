@@ -1,42 +1,116 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
-    <div class="flex">
-        <div class="w-full">
-            <section class="flex flex-col break-words bg-blue sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+{{--<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">--}}
+{{--    <div class="flex">--}}
+{{--        <div class="w-full">--}}
+{{--            <section class="flex flex-col break-words bg-blue sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">--}}
 
-                <header class="font-semibold bg-white text-black py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                    {{ __('Login') }}
-                </header>
+{{--                <header class="font-semibold bg-white text-black py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">--}}
+{{--                    {{ __('Login') }}--}}
+{{--                </header>--}}
 
-                <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('login') }}">
+{{--                <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('login') }}">--}}
+{{--                    @csrf--}}
+
+{{--                    <div class="flex flex-wrap">--}}
+{{--                        <label for="username" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">--}}
+{{--                            {{ __('Username') }}:--}}
+{{--                        </label>--}}
+
+{{--                        <input id="username" type="text"--}}
+{{--                            class="form-input w-full @error('username') border-red-500 @enderror" name="username"--}}
+{{--                            value="{{ old('username') }}" required autocomplete="username" autofocus>--}}
+
+{{--                        @error('username')--}}
+{{--                        <p class="text-red-500 text-xs italic mt-4">--}}
+{{--                            {{ $message }}--}}
+{{--                        </p>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
+
+{{--                    <div class="flex flex-wrap">--}}
+{{--                        <label for="password" class="block text-sm font-bold mb-2 sm:mb-4">--}}
+{{--                            {{ __('Password') }}:--}}
+{{--                        </label>--}}
+
+{{--                        <input id="password" type="password"--}}
+{{--                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"--}}
+{{--                            required>--}}
+
+{{--                        @error('password')--}}
+{{--                        <p class="text-red-500 text-xs italic mt-4">--}}
+{{--                            {{ $message }}--}}
+{{--                        </p>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
+
+{{--                    <div class="flex items-center">--}}
+{{--                        <label class="inline-flex items-center text-sm text-gray-700" for="remember">--}}
+{{--                            <input type="checkbox" name="remember" id="remember" class="form-checkbox"--}}
+{{--                                {{ old('remember') ? 'checked' : '' }}>--}}
+{{--                            <span class="ml-2">{{ __('Remember Me') }}</span>--}}
+{{--                        </label>--}}
+
+{{--                        @if (Route::has('password.request'))--}}
+{{--                        <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline hover:underline ml-auto"--}}
+{{--                            href="{{ route('password.request') }}">--}}
+{{--                            {{ __('Forgot Your Password?') }}--}}
+{{--                        </a>--}}
+{{--                        @endif--}}
+{{--                    </div>--}}
+
+{{--                    <div class="flex flex-wrap">--}}
+{{--                        <button type="submit"--}}
+{{--                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-gray hover:bg-blue-700 sm:py-4">--}}
+{{--                            {{ __('Login') }}--}}
+{{--                        </button>--}}
+
+{{--                        @if (Route::has('register'))--}}
+{{--                        <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">--}}
+{{--                            {{ __("Don't have an account?") }}--}}
+{{--                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('register') }}">--}}
+{{--                                {{ __('Register') }}--}}
+{{--                            </a>--}}
+{{--                        </p>--}}
+{{--                        @endif--}}
+{{--                    </div>--}}
+{{--                </form>--}}
+
+{{--            </section>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</main>--}}
+    <div class="w-full flex justify-center">
+        <div class="w-2/3 mt-16">
+            <div class="px-32 mt-16 border mx-12 py-12 bg-blue bg-opacity-50 ">
+                <p class="text-3xl ">Login</p>
+                <form class="" method="POST" action="{{ route('login') }}">
                     @csrf
-
-                    <div class="flex flex-wrap">
-                        <label for="username" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                    <div class="my-8">
+                        <label for="username" class="text-2xl">
                             {{ __('Username') }}:
                         </label>
 
                         <input id="username" type="text"
-                            class="form-input w-full @error('username') border-red-500 @enderror" name="username"
-                            value="{{ old('username') }}" required autocomplete="username" autofocus>
+                               class="form-input w-full mt-4 border bg-gray-light rounded @error('username') border-red-500 @enderror" name="username"
+                               value="{{ old('username') }}" required autocomplete="username" autofocus>
 
-                        @error('username')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
-                        </p>
-                        @enderror
+                                @error('username')
+                                    <p class="text-red-500 text-xs italic mt-4">
+                                        {{ $message }}
+                                    </p>
+                                @enderror
                     </div>
 
-                    <div class="flex flex-wrap">
-                        <label for="password" class="block text-gray text-sm font-bold mb-2 sm:mb-4">
+                    <div class="my-8">
+                        <label for="password" class="text-2xl">
                             {{ __('Password') }}:
                         </label>
 
                         <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                            required>
+                               class="form-input w-full mt-4 border bg-gray-light rounded @error('password') border-red-500 @enderror" name="password"
+                               value="{{ old('password') }}" required autocomplete="password" autofocus>
 
                         @error('password')
                         <p class="text-red-500 text-xs italic mt-4">
@@ -45,40 +119,31 @@
                         @enderror
                     </div>
 
-                    <div class="flex items-center">
+                    @if (Route::has('password.request'))
+                        <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline hover:underline ml-auto"
+                            href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
+                    @endif
+
+                    <div class="flex items-center mt-2">
                         <label class="inline-flex items-center text-sm text-gray-700" for="remember">
                             <input type="checkbox" name="remember" id="remember" class="form-checkbox"
                                 {{ old('remember') ? 'checked' : '' }}>
                             <span class="ml-2">{{ __('Remember Me') }}</span>
                         </label>
-
-                        @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline hover:underline ml-auto"
-                            href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                        @endif
                     </div>
 
-                    <div class="flex flex-wrap">
+                    <div class="flex justify-center">
                         <button type="submit"
-                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-gray hover:bg-blue-700 sm:py-4">
+                            class="w-96 border bg-gray rounded-xl text-2xl h-12">
                             {{ __('Login') }}
                         </button>
-
-                        @if (Route::has('register'))
-                        <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
-                            {{ __("Don't have an account?") }}
-                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('register') }}">
-                                {{ __('Register') }}
-                            </a>
-                        </p>
-                        @endif
                     </div>
+
                 </form>
 
-            </section>
+            </div>
         </div>
     </div>
-</main>
 @endsection

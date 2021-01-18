@@ -14,42 +14,45 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1be259931f.js" crossorigin="anonymous"></script>
+
     @livewireStyles
 
 </head>
-<body class="bg-gray h-screen antialiased leading-none font-sans">
-    <div id="app">
-        <header class="bg-blue py-6">
-            <div class="container mx-auto flex justify-between items-center px-6">
+    <header>
+        <div class="h-24 border flex bg-blue border  justify-between">
+            <div class="flex items-center">
                 <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <img src="{{ asset('images/logo.svg') }}" alt="Logo"
+                         class="w-24 ">
                 </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
-                    @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        @endif
-                    @else
-                        <span>{{ Auth::user()->name }}</span>
-
-                        <a href="{{ route('logout') }}"
-                           class="no-underline hover:underline"
-                           onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                            {{ csrf_field() }}
-                        </form>
-                    @endguest
-                </nav>
+                <div>
+                    <p class="text-4xl ml-4">Partidos</p>
+                </div>
             </div>
-        </header>
+
+            <div class="flex items-center ">
+              <div class="text-center text-3xl">
+                  <a class="flex flex-col" href="{{ route('login') }}">
+                      <i class="far fa-user"></i>
+                      <p>login</p>
+                  </a>
+              </div>
+                <div class="flex items-center pr-10 pl-4">
+                    <div class="text-center text-3xl">
+                        <a class="flex flex-col" href="{{ route('register') }}">
+                            <i class="fas fa-pencil-alt"></i>
+                            <p>Register</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
         @yield('content')
         @livewireScripts
 
     </div>
-</body>
 </html>
