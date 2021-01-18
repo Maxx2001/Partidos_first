@@ -2,9 +2,8 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Event;
 use App\Models\Invitation;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Notifications extends Component
@@ -13,15 +12,11 @@ class Notifications extends Component
     {
         $events = [];
 
-        $invites = User::find(auth()->id())
-            ->inventations
-            ->where('status_id', '=', 1);
+        $invites = Auth::user()
+            ->inventations;
 
-        foreach ($invites as $invite){
-            $events[] = Event::find($invite->event_id);
-        }
 
-        return view('livewire.notifications', compact('events'));
+        return view('livewire.notifications', compact('invites'));
     }
 
     public function accept_invite($id)

@@ -106,9 +106,8 @@ class InvitationController extends Controller
     {
         $events = [];
 
-        $inventations = User::find(auth()->id())
-            ->inventations
-            ->where('status_id', '=', 2);
+        $inventations = Auth::user()
+            ->inventations;
 
         foreach ($inventations as $inventation){
            $events[] = Event::find($inventation->event_id);

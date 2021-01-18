@@ -18,13 +18,6 @@ class EventController extends Controller
         ]);
     }
 
-//    public function show_your_created_events()
-//    {
-//        return view('event.created_events', [
-//            'event' => User::find(auth()->id())->event
-//        ]);
-//    }
-
     public function show($id){
         return view('event.event', [
             'event' => Event::find($id)
