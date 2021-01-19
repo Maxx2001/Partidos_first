@@ -18,7 +18,6 @@ class Event extends Model
             ->get();
     }
 
-    //change to show only events with user id
     public function user()
     {
         return $this->belongsTo(User::class);

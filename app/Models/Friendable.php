@@ -19,12 +19,4 @@ trait Friendable
         return $this->hasMany(FriendRequest::class)
             ->where('status', '=', 2);
     }
-
-//    public function friendRequest()
-//    {
-//        return $this->hasMany(FriendRequest::class)
-//            ->where('friend_id', '=', auth()->id())
-//            ->where('status', '=', 1);
-////            ->orWhere('friend_id', '=', auth()->id());
-//    }
 }

@@ -24,14 +24,23 @@
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvitationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvitationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShowUserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TimeLineController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/FindUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/FindUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Friendable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Friendable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/friends/friend_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/friends/friend_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/friends/friend_request.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/friends/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/invitations.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/invites.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/your_invited_events.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/events/events.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/events/events.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/events/events_created.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/find-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/find-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/notifications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/notifications.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/edit_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit_profile.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +228,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -285,7 +305,7 @@
       <workItem from="1610740990439" duration="619000" />
       <workItem from="1610795575691" duration="1251000" />
       <workItem from="1610954715920" duration="37751000" />
-      <workItem from="1611042387613" duration="1279000" />
+      <workItem from="1611042387613" duration="2158000" />
     </task>
     <servers />
   </component>

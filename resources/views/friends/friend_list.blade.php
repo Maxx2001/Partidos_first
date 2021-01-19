@@ -2,7 +2,17 @@
 
 @section('content')
     <div class="flex justify-center ">
-        <div class="border rounded bg-gray-light w-80 h-16 text-3xl flex justify-center items-center mt-12">
+        <div class="
+        border
+        rounded
+        bg-gray-light
+         w-80
+         h-16
+         text-3xl
+         flex
+          justify-center
+          items-center
+           mt-12">
             Your friends
         </div>
     </div>
@@ -16,12 +26,16 @@
                         alt="Profile picture"
                         class="w-36 rounded-3xl"
                     >
-                    <p class="text-3xl text-center mt-4">{{$friend->username}}</p>
+                    <p class="text-3xl text-center mt-4">
+                        {{$friend->username}}
+                    </p>
                 </div>
             </a>
         @empty
             <div class="border w-full flex justify-center mt-4">
-                <p class="text-5xl">No friends yet</p>
+                <p class="text-5xl">
+                    No friends yet
+                </p>
             </div>
         @endforelse
 

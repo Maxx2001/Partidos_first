@@ -1,5 +1,5 @@
 <div>
-    @forelse($invites as $invite)
+    @foreach($invites as $invite)
         <div class="mt-4 border p-4 rounded-2xl bg-blue">
             <p>
                 <a class="border rounded bg-gray p-2 text-xl" href="{{ route('event', \App\Models\Event::find($invite->event_id)) }}">
@@ -11,11 +11,9 @@
                 <p class="mx-3"><a class='border rounded bg-red p-2' href="#">Decline</a></p>
             </div>
         </div>
-    @empty
-        <p>No invites yet</p>
-    @endforelse
+    @endforeach
 
-     @forelse($friend_requests as $friend_requests)
+     @foreach($friend_requests as $friend_requests)
             <div class="mt-4 border p-4 rounded-2xl bg-blue text-center">
             <p>
                 <a class="border rounded bg-gray p-2 text-xl " href="{{ route('profile', $friend_requests->user_id) }}">
@@ -28,9 +26,7 @@
                     <p class="mx-3"><a class='border rounded bg-red p-2' href="#">Decline</a></p>
                 </div>
             </div>
-        @empty
-        <p>No friend requests</p>
-    @endforelse
+    @endforeach
 
 
 </div>

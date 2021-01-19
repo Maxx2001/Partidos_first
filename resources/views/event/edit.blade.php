@@ -5,7 +5,6 @@
     <div class="flex flex-col">
         <p class="text-3xl text-center">Edit event</p>
         <div class="border rounded-xl p-4 m-4">
-{{--            <form action="{{ route('update_event', $event) }}">--}}
             <form action="{{ route('update_event', $event) }}" method="POST">
                 @csrf
                 @method('PATCH')
@@ -108,7 +107,9 @@
                     @enderror
                 </div>
                 <div class="text-center mt-2">
-                    <button type="submit" class="border rounded-xl p-2">Update event</button>
+                    <button type="submit" class="border rounded-xl p-2">
+                        Update event
+                    </button>
                 </div>
             </form>
         </div>

@@ -14,7 +14,9 @@
                     class="border">
             </div>
             @error('eventname')
-                <p class="text-red-500 text-sm mt-2">{{$message}}</p>
+                <p class="text-red-500 text-sm mt-2">
+                    {{$message}}
+                </p>
             @enderror
 
             <div class="p-3">
@@ -27,7 +29,9 @@
                     autofocus class="border">
             </div>
             @error('location')
-            <p class="text-red-500 text-sm mt-2">{{$message}}</p>
+            <p class="text-red-500 text-sm mt-2">
+                {{$message}}
+            </p>
             @enderror
 
 
@@ -41,7 +45,9 @@
                     class="border">
             </div>
             @error('date')
-                <p class="text-red-500 text-sm mt-2">{{$message}}</p>
+                <p class="text-red-500 text-sm mt-2">
+                    {{$message}}
+                </p>
             @enderror
 
             <div class="p-3">
@@ -54,7 +60,9 @@
                     class="border">
             </div>
             @error('start_time')
-                <p class="text-red-500 text-sm mt-2">{{$message}}</p>
+                <p class="text-red-500 text-sm mt-2">
+                    {{$message}}
+                </p>
             @enderror
 
             <div class="p-3">
@@ -66,10 +74,14 @@
                     class="border">
             </div>
             @error('end_time')
-            <p class="text-red-500 text-sm mt-2">{{$message}}</p>
+            <p class="text-red-500 text-sm mt-2">
+                {{$message}}
+            </p>
             @enderror
 
-            <button type="post" class="border h-8">Create event</button>
+            <button type="post" class="border h-8">
+                Create event
+            </button>
         </div>
     </form>
     @endsection

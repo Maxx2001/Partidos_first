@@ -29,7 +29,6 @@
                     @endif
                 @empty
                     <p>No results</p>
-
                 @endforelse
             @endunless
         </div>
