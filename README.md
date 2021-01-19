@@ -10,6 +10,16 @@ Install the composer dependencies
 Composer install
 ```
 
+Install npm
+```
+nmp install
+```
+
+Run npm dev
+```
+npm run dev
+```
+
 Make sure you have a set up your database, and run the migrations and seeds
 
 ```
