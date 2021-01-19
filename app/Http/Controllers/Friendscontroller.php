@@ -11,12 +11,6 @@ use Illuminate\Support\Facades\Redirect;
 
 class Friendscontroller extends Controller
 {
-    public function index(User $user)
-    {
-        return view('friends.index', [
-            //
-        ]);
-    }
     public function create($id)
     {
         $friend = FriendRequest::create([

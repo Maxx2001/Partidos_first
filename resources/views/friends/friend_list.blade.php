@@ -1,18 +1,18 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="flex justify-center ">
+    <div class="flex justify-center mt-16 ">
         <div class="
-        border
-        rounded
-        bg-gray-light
-         w-80
-         h-16
-         text-3xl
-         flex
-          justify-center
-          items-center
-           mt-12">
+       border
+            rounded-xl
+            text-3xl
+             p-4
+             w-96
+             h-12
+             flex
+             justify-center
+             items-center
+             bg-gray-light">
             Your friends
         </div>
     </div>
