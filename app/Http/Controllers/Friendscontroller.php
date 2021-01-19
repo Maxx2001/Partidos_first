@@ -81,7 +81,7 @@ class Friendscontroller extends Controller
         $friends->status = 2;
         $friends->save();
 
-        return redirect('/show_friend_request');
+        return Redirect::back();
     }
 
     public function decline_request(FriendRequest $friends, $id)
@@ -91,7 +91,7 @@ class Friendscontroller extends Controller
         $friends->status = 3;
         $friends->save();
 
-        return redirect('/show_friend_request');
+        return Redirect::back();
     }
 
     public function destroy($id)

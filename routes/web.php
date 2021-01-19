@@ -5,9 +5,7 @@ use App\Http\Controllers\Friendscontroller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Notifications;
-use App\Http\Controllers\TimeLineController;
 use App\Http\Controllers\InvitationController;
-use Illuminate\Support\LazyCollection;
 use Illuminate\Support\Facades\Route;
 
 
@@ -29,9 +27,6 @@ Route::middleware('auth')->group(function(){
         'edit' => 'edit_event',
     ]);
     Route::get('/', [EventController::class, 'index'])->name('agenda');
-
-
-    Route::get('/your_created_events', [EventController::class, 'show_your_created_events'])->name('your_created_events');
 
     //invitation route
     Route::resource('invitation', InvitationController::class);

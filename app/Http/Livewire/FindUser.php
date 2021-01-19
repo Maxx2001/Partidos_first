@@ -19,16 +19,3 @@ class FindUser extends Component
     }
 }
 
-
-//    public $find = '';
-//
-//    public function render()
-//    {
-//        $find = $this->find;
-//        $users = $searchResults = (new Search())
-//            ->registerModel(User::class, 'username')
-//            ->search($find);
-//
-//        return view('livewire.find-user', compact('users'));
-//    }
-

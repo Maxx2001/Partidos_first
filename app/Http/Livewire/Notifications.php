@@ -4,8 +4,6 @@ namespace App\Http\Livewire;
 
 use App\Models\FriendRequest;
 use App\Models\Invitation;
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
