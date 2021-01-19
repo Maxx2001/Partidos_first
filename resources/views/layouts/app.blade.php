@@ -20,7 +20,7 @@
 
 </head>
     <header>
-        <div class="h-24 border flex bg-blue border  justify-between">
+        <div class="h-24 flex bg-blue  justify-between">
             <div class="flex items-center">
                 <div>
                     <img src="{{ asset('images/logo.svg') }}" alt="Logo"

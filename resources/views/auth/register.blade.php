@@ -4,7 +4,7 @@
 <main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
     <div class="flex">
         <div class="w-full">
-            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+            <section class="flex flex-col break-words bg-blue bg-opacity-50 sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
                 <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                     {{ __('Register') }}
@@ -19,7 +19,7 @@
                             {{ __('Name') }}:
                         </label>
 
-                        <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror"
+                        <input id="name" type="text" class="form-input border rounded w-full @error('name')  border-red-500 @enderror"
                             name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                         @error('name')
@@ -34,7 +34,7 @@
                             {{ __('Username') }}:
                         </label>
 
-                        <input id="username" type="text" class="form-input w-full @error('username')  border-red-500 @enderror"
+                        <input id="username" type="text" class="form-input w-full border rounded  @error('username')  border-red-500 @enderror"
                                name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                         @error('username')
@@ -51,7 +51,7 @@
                         </label>
 
                         <input id="phonenumber" type="tel"
-                            class="form-input w-full @error('phonenumber') border-red-500 @enderror" name="phonenumber"
+                            class="form-input w-full border rounded  @error('phonenumber') border-red-500 @enderror" name="phonenumber"
                             value="{{ old('phonenumber') }}" required autocomplete="phonenumber">
 
                         @error('phonenumber')
@@ -68,7 +68,7 @@
                         </label>
 
                         <input id="email" type="email"
-                               class="form-input w-full @error('email') border-red-500 @enderror" name="email"
+                               class="form-input w-full border rounded  @error('email') border-red-500 @enderror" name="email"
                                value="{{ old('email') }}" required autocomplete="email">
 
                         @error('email')
@@ -84,7 +84,7 @@
                         </label>
 
                         <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
+                            class="form-input w-full border rounded @error('password') border-red-500 @enderror" name="password"
                             required autocomplete="new-password">
 
                         @error('password')
@@ -99,13 +99,13 @@
                             {{ __('Confirm Password') }}:
                         </label>
 
-                        <input id="password-confirm" type="password" class="form-input w-full"
+                        <input id="password-confirm" type="password" class="form-input w-full border rounded "
                             name="password_confirmation" required autocomplete="new-password">
                     </div>
 
-                    <div class="flex flex-wrap">
+                    <div class="flex justify-center flex-wrap">
                         <button type="submit"
-                            class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                            class="w-60 border bg-gray rounded-xl text-2xl h-12">
                             {{ __('Register') }}
                         </button>
 
