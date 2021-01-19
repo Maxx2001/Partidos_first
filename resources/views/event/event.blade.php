@@ -1,15 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class=" h-32 flex justify-center items-center">
+    <div class=" h-32 flex justify-center items-center mt-8">
         <h1 class="
-        text-3xl
         border
         rounded-xl
-        bg-gray-light
-        py-2
-        w-64
-        text-center">Event details</h1>
+        text-3xl
+        w-96
+        h-12
+        flex
+        justify-center
+        items-center
+        bg-gray-light">Event details</h1>
     </div>
     <div class="flex">
         <div class="text-2xl py-10 px-12 w-2/5 mt-20">

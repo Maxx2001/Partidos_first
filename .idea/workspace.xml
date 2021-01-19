@@ -24,8 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/create_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/event/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/invite_friends.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invitation/invite_friends.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +282,7 @@
       <workItem from="1610795575691" duration="1251000" />
       <workItem from="1610954715920" duration="37751000" />
       <workItem from="1611042387613" duration="4675000" />
-      <workItem from="1611052266703" duration="2565000" />
+      <workItem from="1611052266703" duration="4151000" />
     </task>
     <servers />
   </component>

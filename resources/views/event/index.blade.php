@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
         <div class="flex justify-center mt-16 ">
             <div class="
             border

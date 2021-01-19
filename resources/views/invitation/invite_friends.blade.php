@@ -1,8 +1,18 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="flex justify-center">
-        <h1 class="text-3xl pt-12">Invite your friends</h1>
+    <div class="flex justify-center mt-16">
+        <h1 class="border
+                rounded-xl
+                text-3xl
+                 p-4
+                 w-96
+                 h-12
+                 flex
+                 justify-center
+                 items-center
+                 bg-gray-light">
+            Invite your friends</h1>
     </div>
     <div class=" flex  justify-center flex-wrap w-full mt-12">
         @foreach($friends as $friend)
