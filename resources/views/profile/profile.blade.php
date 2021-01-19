@@ -48,14 +48,8 @@
                 @endif
             </div>
         </div>
-
-
         <div class="h-full bg-blue bg-opacity-20">
-
         </div>
     </div>
 @endsection
-
-
-{{--{{auth()->user()->isFriend($user) ? 'Friends' : 'Send friend request'}}--}}
 
