@@ -21,7 +21,11 @@
             @unless($search == '')
                 @forelse($users as $user)
                     @if(auth()->user()->isnot($user->searchable))
-                        <a href="{{ route('profile',$user->searchable) }}">  <p class="text-3xl border rounded-2xl py-2 px-4 m-2 w-32 text-center">{{ $user->searchable->username }}</p></a>
+                        <a href="{{ route('profile',$user->searchable) }}">
+                            <p class="text-3xl border rounded-2xl py-2 px-4 m-2 text-center">
+                                {{ $user->searchable->username }}
+                            </p>
+                        </a>
                     @endif
                 @empty
                     <p>No results</p>
