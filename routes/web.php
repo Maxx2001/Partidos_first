@@ -35,8 +35,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/decline_invite/{invitation:id}', [InvitationController::class, 'decline_invite'])->name('decline_invite');
 
     // Profile routes
-    Route::get('/profile/{user:id}', [ProfileController::class, 'show'])->name('profile');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('edit_profile');
+    Route::get('/profile/{user:id}', [ProfileController::class, 'show'])->name('profile');
     Route::get('/profile/{user:id}/update', [ProfileController::class, 'update'])->name('update_profile');
 
     //Friend routes

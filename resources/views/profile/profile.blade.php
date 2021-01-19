@@ -22,7 +22,7 @@
                 </div>
                 @if(auth()->user()->is($user))
                     <div class="w-1/4 flex justify-center">
-                        <a href="{{route('edit_profile', $user)}}">
+                        <a href="{{route('edit_profile')}}">
                             <p class="border rounded bg-blue w-56 text-center text-xl my-4 h-12 flex justify-center items-center"
                             >Edit profile
                             </p>
