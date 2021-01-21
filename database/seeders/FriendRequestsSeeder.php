@@ -31,6 +31,11 @@ class FriendRequestsSeeder extends Seeder
             'friend_id' => 4,
             'status' => 2,
         ]);
+        DB::table('friend_requests')->insert([
+            'user_id' => 3,
+            'friend_id' => 5,
+            'status' => 2,
+        ]);
 
 
     }

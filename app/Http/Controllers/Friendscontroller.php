@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
-
 class Friendscontroller extends Controller
 {
     public function create($id)
@@ -31,15 +30,10 @@ class Friendscontroller extends Controller
     {
         $friends = [];
 
-        $friend_list = Auth::user()
-            ->friends
-            ->where('status', "=", "2");
+        $friend_list = Auth::user()->friends;
 
-
-        foreach ($friend_list as $friend)
-        {
-            if ($friend->user_id == auth()->id())
-            {
+        foreach ($friend_list as $friend) {
+            if ($friend->user_id == auth()->id()) {
                 $friend->user_id = $friend->friend_id;
             }
             $friends[] = User::find($friend->user_id);
@@ -96,3 +90,16 @@ class Friendscontroller extends Controller
     }
 
 }
+//$friends = [];
+//
+//$friend_list = Auth::user()
+//    ->friends;
+//
+//foreach ($friend_list as $friend)
+//{
+//    if ($friend->user_id == auth()->id())
+//    {
+//        $friend->user_id = $friend->friend_id;
+//    }
+//    $friends[] = User::find($friend->user_id);
+//}

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
 
@@ -33,22 +34,5 @@ class User extends Authenticatable implements Searchable
     {
         return $this->hasMany(Event::class);
     }
-
-    public function isPending(User $user)
-    {
-        return $this->hasMany(FriendRequest::class)
-            ->where('friend_id', $user->id)
-            ->where('status', '=', 1)
-            ->exists();
-    }
-
-    public function isFriend(User $user)
-    {
-        return $this->friend()->where('friend_id', $user->id)
-            ->where('status', '=', 2)
-            ->exists();
-    }
-
-
 
 }

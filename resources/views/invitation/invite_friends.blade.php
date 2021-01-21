@@ -16,11 +16,11 @@
     </div>
     <div class=" flex  justify-center flex-wrap w-full mt-12">
         @foreach($friends as $friend)
-            <form action="\invitation" method="POST">
+        <div>
+            <a href="{{route('profile', $friend)}}">
                 @csrf
                 <input type="hidden" name="friend_id" value="{{ $friend->id }}">
                 <input type="hidden" name="event_id" value="{{ $event_id}}">
-                <button type="post" class="w-32 h-40 m-4 flex flex-col items-center mx-20">
                     <div class=" w-32 h-40 m-4 flex flex-col items-center  mx-20">
                         <img
                             src="{{asset('/images/profile_pictures/default.jpg')}}"
@@ -29,8 +29,16 @@
                         >
                         <p class="text-3xl text-center mt-4">{{$friend->username}}</p>
                     </div>
-                </button>
-            </form>
+                </a>
+                <div class="flex justify-center pt-4">
+                    <form action="\invitation" method="POST" class="border w-2/3 rounded-2xl text-center text-2xl">
+                        @csrf
+                        <input type="hidden" name="friend_id" value="{{ $friend->id }}">
+                        <input type="hidden" name="event_id" value="{{ $event_id}}">
+                        <button type="post" class="">Send invite</button>
+                    </form>
+                </div>
+            </div>
 
         @endforeach
     </div>

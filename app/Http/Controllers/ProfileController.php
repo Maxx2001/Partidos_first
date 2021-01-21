@@ -9,11 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public $friends = [];
-
     public function show($id)
     {
         $friends = auth()->user()->friends;
+
 
         return view('profile.profile', [
             'user' => User::find($id),

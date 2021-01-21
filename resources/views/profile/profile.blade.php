@@ -34,10 +34,10 @@
                             Pending
                         </p>
                     </div>
-                @elseif(auth()->user()->isFriend($user))
+                @elseif(auth()->user()->isFriends($user))
                     <div class="w-1/4 flex justify-center">
                         <p class="border rounded bg-blue w-56 text-center text-xl my-4 h-12 flex justify-center items-center">
-                          Friends
+                           Friends
                         </p>
                     </div>
                 @else

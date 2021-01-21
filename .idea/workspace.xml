@@ -23,10 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f1e020-42d2-492d-bbe7-f01371cd9826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Partidos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Partidos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Friendscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Friendable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Friendable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/FriendRequestsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FriendRequestsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invitation/invite_friends.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invitation/invite_friends.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/profile.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,17 +218,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -293,6 +286,9 @@
       <workItem from="1610954715920" duration="37751000" />
       <workItem from="1611042387613" duration="4675000" />
       <workItem from="1611052266703" duration="6165000" />
+      <workItem from="1611169401410" duration="1814000" />
+      <workItem from="1611175248027" duration="5073000" />
+      <workItem from="1611216171597" duration="7349000" />
     </task>
     <servers />
   </component>
