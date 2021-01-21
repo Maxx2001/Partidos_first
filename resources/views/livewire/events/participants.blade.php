@@ -12,14 +12,16 @@
                 flex-wrap">
 
   @forelse($participants as $participant)
-        <div class=" w-32 h-40 m-4 flex flex-col items-center">
-            <img
-                src="{{asset('/images/profile_pictures/default.jpg')}}"
-                alt="Profile picture"
-                class="w-24 rounded-full"
-            >
-            <p class="text-3xl text-center">{{$participant->username}}</p>
-        </div>
+        <a href="{{route('profile', $participant)}}">
+            <div class=" w-32 h-40 m-4 flex flex-col items-center">
+                <img
+                    src="{{asset('/images/profile_pictures/default.jpg')}}"
+                    alt="Profile picture"
+                    class="w-24 rounded-full"
+                >
+                <p class="text-3xl text-center">{{$participant->username}}</p>
+            </div>
+        </a>
 
         @empty
             <p>No participants yet</p>

@@ -56,7 +56,8 @@
 
                 <div class="border rounded p-2 bg-gray-light">
                     <div class="px-4 py-2">
-                        <p> <i class="far fa-user"></i>
+                        <p>
+                            <i class="far fa-user"></i>
                             {{\App\Models\User::find($invited_event->user_id)->username}}</p>
                     </div>
                     <div class="px-4 px-2">

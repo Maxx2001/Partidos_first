@@ -40,6 +40,12 @@
                            Friends
                         </p>
                     </div>
+                @elseif(auth()->user()->hasFrendRequest($user))
+                    <div class="w-1/4 flex justify-center">
+                        <p class="border rounded bg-blue w-60 text-center text-xl my-4 h-12 flex justify-center items-center">
+                            Incoming friend request
+                        </p>
+                    </div>
                 @else
                     <form method="POST" action="{{ route('add_friend', $user) }}" class="w-1/4 flex justify-center">
                         @csrf

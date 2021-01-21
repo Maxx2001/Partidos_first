@@ -28,8 +28,10 @@
 
                 <div class="border rounded p-2 bg-gray-light">
                     <div class="px-4 pt-2">
-                        <p> <i class="far fa-user"></i>
-                            {{\App\Models\User::find($event->user_id)->username}}</p>
+                        <a href="{{route('profile', \App\Models\User::find($event->user_id))}}">
+                            <i class="far fa-user"></i>
+                                {{\App\Models\User::find($event->user_id)->username}}
+                        </a>
                     </div>
                     <div class="px-4">
                         <p> <i class="fas fa-map-marker-alt"></i> {{$event->location}}</p>

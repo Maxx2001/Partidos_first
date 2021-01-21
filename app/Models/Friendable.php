@@ -43,4 +43,19 @@ trait Friendable
             ->where('status', '=', 2)
             ->exists();
     }
+
+    public function hasFrendRequest($user)
+    {
+        return $this->hasMany(FriendRequest::class)
+            ->where(function ($query) use ($user) {
+                $query->where('friend_id', '=',  $user->id)
+                    ->Where('user_id', '=', auth()->id());
+            })
+            ->orWhere(function ($query) use ($user) {
+                $query->where('user_id', '=',  $user->id)
+                    ->Where('friend_id', '=', auth()->id());
+            })
+            ->where('status', '=', 1)
+            ->exists();
+    }
 }

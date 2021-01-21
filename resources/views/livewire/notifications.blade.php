@@ -23,7 +23,7 @@
 
                 <div class="mt-6 flex content-around">
                     <p class="mx-3"><a class='border rounded bg-green p-2' href="{{route('accept_request', $friend_requests)}}">Accept</a></p>
-                    <p class="mx-3"><a class='border rounded bg-red p-2' href="#">Decline</a></p>
+                    <p class="mx-3"><a class='border rounded bg-red p-2' href="{{route('decline_request', $friend_requests)}}">Decline</a></p>
                 </div>
             </div>
     @endforeach

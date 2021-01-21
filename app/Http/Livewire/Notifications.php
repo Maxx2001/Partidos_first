@@ -36,7 +36,7 @@ class Notifications extends Component
 
     public function decline_invite($id)
     {
-        $invitation = Invitation::find($id);
+        $invitation = Invitation::destroy($id);
 
         $invitation->status_id = 3;
         $invitation->save();
