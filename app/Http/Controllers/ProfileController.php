@@ -11,12 +11,13 @@ class ProfileController extends Controller
 {
     public function show($id)
     {
-        $friends = auth()->user()->friends;
+        $user = User::find($id);
+        $friend = auth()->user()->friend($user);
 
 
         return view('profile.profile', [
-            'user' => User::find($id),
-            'friends' => $friends
+            'user' => $user,
+            'friend' => $friend
         ]);
     }
 

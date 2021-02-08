@@ -15,11 +15,11 @@ trait Friendable
             ->orWhere('friend_id', '=', auth()->id());
     }
 
-    public function friend()
-    {
-        return $this->hasMany(FriendRequest::class)
-            ->where('status', '=', 2);
-    }
+//    public function friend()
+//    {
+//        return $this->hasMany(FriendRequest::class)
+//            ->where('status', '=', 2);
+//    }
 
     public function isPending(User $user)
     {
@@ -29,7 +29,7 @@ trait Friendable
             ->exists();
     }
 
-    public function isFriends($user)
+    public function request($user)
     {
         return $this->hasMany(FriendRequest::class)
             ->where(function ($query) use ($user) {
@@ -40,9 +40,21 @@ trait Friendable
                 $query->where('user_id', '=',  $user->id)
                     ->Where('friend_id', '=', auth()->id());
             })
-            ->where('status', '=', 2)
+            ->where('status', '=', 2);
+    }
+
+    public function isFriends($user)
+    {
+        return $this->request($user)
             ->exists();
     }
+
+    public function friend($user)
+    {
+        return $this->request($user)
+            ->get();
+    }
+
 
     public function hasFrendRequest($user)
     {

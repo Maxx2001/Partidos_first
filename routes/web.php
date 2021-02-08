@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/explore_users', [Friendscontroller::class])->name('explore_users');
     Route::get('/friends', [Friendscontroller::class, 'show'])->name('friends');
     Route::post('/addfriend/{user:id}', [Friendscontroller::class, 'create'])->name('add_friend');
-    Route::delete('/friend/{user:id}', [Friendscontroller::class, 'destroy'])->name('remove_friend');
+    Route::delete('/friend/{friend}', [Friendscontroller::class, 'destroy'])->name('remove_friend');
     Route::get('/accept_request/{friend:id}', [Friendscontroller::class, 'accept_request'])->name('accept_request');
     Route::get('/decline_request/{friend:id}', [Friendscontroller::class, 'decline_request'])->name('decline_request');
 

@@ -35,10 +35,20 @@
                         </p>
                     </div>
                 @elseif(auth()->user()->isFriends($user))
-                    <div class="w-1/4 flex justify-center">
-                        <p class="border rounded bg-blue w-56 text-center text-xl my-4 h-12 flex justify-center items-center">
-                           Friends
-                        </p>
+                    <div class="flex flex-col">
+                        <div class=" flex justify-center">
+                            <p class="border rounded bg-blue w-56 text-center text-xl my-4 h-12 flex justify-center items-center">
+                               Friends
+                            </p>
+                        </div>
+                        <form method="POST" action="{{route('remove_friend', $friend[0])}}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="border rounded bg-blue w-56 text-center text-xl my-4 h-12 flex justify-center items-center"
+                            >
+                                Remove friend
+                            </button>
+                        </form>
                     </div>
                 @elseif(auth()->user()->hasFrendRequest($user))
                     <div class="w-1/4 flex justify-center">

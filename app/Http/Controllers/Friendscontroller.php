@@ -42,26 +42,6 @@ class Friendscontroller extends Controller
         return view('friends.friend_list', compact('friends'));
     }
 
-//    public function show_friend_request()
-//    {
-//        $friend_list= [];
-//
-//        $friends = FriendRequest::all()
-//            ->where("friend_id", "=", auth()->id())
-//            ->where('status', '=', 1);
-//
-//        foreach ($friend_list as $friend)
-//        {
-//            if ($friend->user_id == auth()->id())
-//            {
-//                $friend->user_id = $friend->friend_id;
-//            }
-//            $friends[] = User::find($friend->user_id);
-//        }
-//
-//        return view('friends.friend_request', compact('friends'));
-//    }
-
     public function accept_request(FriendRequest $friends, Request $request, $id)
     {
         $friends = FriendRequest::find($id);
@@ -79,24 +59,12 @@ class Friendscontroller extends Controller
         return Redirect::back();
     }
 
-    public function destroy($id)
+    public function destroy($friend)
     {
-        $friend = FriendRequest::find($id);
-        FriendRequest::destroy($id);
+        $friend_request = FriendRequest::find($friend)->id;
+        FriendRequest::destroy($friend_request);
+
         return redirect('/friends');
     }
 
 }
-//$friends = [];
-//
-//$friend_list = Auth::user()
-//    ->friends;
-//
-//foreach ($friend_list as $friend)
-//{
-//    if ($friend->user_id == auth()->id())
-//    {
-//        $friend->user_id = $friend->friend_id;
-//    }
-//    $friends[] = User::find($friend->user_id);
-//}
